@@ -2,10 +2,11 @@ import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
 import './assets/style/styleSignup.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
-import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
 import ImageUploader from'./ImageUploader';
+import { Link } from 'react-router-dom';
+
 
 class Signup extends Component {
 
@@ -58,9 +59,9 @@ class Signup extends Component {
                                             Signup
                                         </Button>
 
-                                        <Button variant="primary" type="submit">
+                                        <Link to='/'><Button variant="primary" type="submit">
                                             Cancel
-                                        </Button>
+                                        </Button></Link>
                                 </Form>
                             </Col>
                         </Row>

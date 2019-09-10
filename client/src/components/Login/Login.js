@@ -2,6 +2,7 @@ import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
 import './assets/style/styleLogin.css';
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 
 class Login extends Component {
@@ -34,9 +35,9 @@ class Login extends Component {
                                             Login
                                         </Button>
 
-                                        <Button variant="primary" type="submit">
+                                        <Link to='/'><Button variant="primary" type="submit">
                                             Cancel
-                                        </Button>
+                                        </Button></Link>
                                 </Form>
                             </Col>
                         </Row>
