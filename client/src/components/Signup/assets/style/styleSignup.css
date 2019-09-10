@@ -18,5 +18,13 @@ body{
     margin-top: 20px;
     background: yellow;
 }
+input{
+    width: 60%;
+    text-align: center;
+}
+.nonna{
+    justify-content: center;
+}
+
 
 

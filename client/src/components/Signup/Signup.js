@@ -1,8 +1,11 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
 import './assets/style/styleSignup.css';
-import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
-
+import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
+import DatePicker from 'react-datepicker';
+import "react-datepicker/dist/react-datepicker.css";
+import Date from './Date';
+import ImageUploader from'./ImageUploader';
 
 class Signup extends Component {
 
@@ -40,11 +43,19 @@ class Signup extends Component {
                                             <Form.Label>Confirm Password</Form.Label>
                                             <Form.Control type="password" placeholder="Confirm Password" />
                                         </Form.Group>
+                                       
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>Birth-Date</Form.Label>
+                                            <Date/>
+                                        </Form.Group>
 
-
-
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>Upload Image</Form.Label>
+                                            <ImageUploader/>
+                                        </Form.Group>
+                                        
                                         <Button variant="primary" type="submit">
-                                            Submit
+                                            Signup
                                         </Button>
 
                                         <Button variant="primary" type="submit">

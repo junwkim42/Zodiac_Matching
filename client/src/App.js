@@ -9,8 +9,15 @@ import Signup from './components/Signup/Signup';
 
 class App extends Component {
   
+  state ={
+    startDate: new Date()
+  };
 
-
+  handleChange = date => {
+    this.setState({
+      startDate: date
+    });
+  };
 
 
   render(){
