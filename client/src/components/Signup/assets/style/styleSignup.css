@@ -25,6 +25,9 @@ input{
 .nonna{
     justify-content: center;
 }
-
+.dropdown-toggle, .dropdown-item{
+    width: 60%;
+    font-size: 4vw;
+}
 
 

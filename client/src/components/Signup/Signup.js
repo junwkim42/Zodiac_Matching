@@ -1,10 +1,10 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
 import './assets/style/styleSignup.css';
-import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
+import { Button, Container, Row, Col, Image, Form, DropdownButton, Dropdown } from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
-import ImageUploader from'./ImageUploader';
+import ImageUploader from'./Image';
 import { Link } from 'react-router-dom';
 
 
@@ -49,6 +49,12 @@ class Signup extends Component {
                                             <Form.Label>Birth-Date</Form.Label>
                                             <Date/>
                                         </Form.Group>
+
+                                        <DropdownButton id="dropdown-basic-button" title="Gender">
+                                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
+                                        </DropdownButton>
 
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Upload Image</Form.Label>
