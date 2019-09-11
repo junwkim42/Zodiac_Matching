@@ -1,0 +1,27 @@
+*{
+    margin:0px;
+    padding:0px;
+    max-width: none;
+}
+body{
+    background: black;
+}
+.a{
+    justify-content: center;
+    margin-top: 70px;
+    background: black;
+}
+.b{
+    justify-content: center;
+    font-size: 11vw;
+    text-align: center;
+    margin-top: 40px;
+    background:black;
+}
+.c, .d{
+    justify-content: center;
+    text-align: center;
+}
+.btn{
+    margin:10px;
+}

@@ -1,0 +1,30 @@
+*{
+    margin:0px;
+    padding:0px;
+    max-width: none;
+}
+body{
+    background: black;
+}
+.a{
+    justify-content: center;
+    margin-top: 70px;
+    background: black;
+}
+.b{
+    justify-content: center;
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 20px;
+    background: rgb(102, 218, 208);
+}
+input{
+    width: 60%;
+    text-align: center;
+}
+.nonna{
+    justify-content: center;
+}
+
+
+
