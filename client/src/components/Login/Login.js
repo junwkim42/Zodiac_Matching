@@ -31,9 +31,9 @@ class Login extends Component {
                                             <Form.Label>Password</Form.Label>
                                             <Form.Control type="password" placeholder="Password" />
                                         </Form.Group>
-                                        <Button variant="primary" type="submit">
+                                        <Link to='/profile'><Button variant="primary" type="submit">
                                             Login
-                                        </Button>
+                                        </Button></Link>
 
                                         <Link to='/'><Button variant="primary" type="submit">
                                             Cancel

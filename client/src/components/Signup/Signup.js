@@ -55,9 +55,9 @@ class Signup extends Component {
                                             <ImageUploader/>
                                         </Form.Group>
                                         
-                                        <Button variant="primary" type="submit">
+                                        <Link to='/profile'><Button variant="primary" type="submit">
                                             Signup
-                                        </Button>
+                                        </Button></Link>
 
                                         <Link to='/'><Button variant="primary" type="submit">
                                             Cancel
