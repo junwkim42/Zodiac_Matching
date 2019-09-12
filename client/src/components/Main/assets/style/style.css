@@ -6,10 +6,37 @@
 body{
     background: black;
 }
+/* rotating logo start */
+.imgLogo{
+    animation: spin infinite 250s linear;
+}
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+/* rotating logo end */
+/* logo start */
+.logoCont{
+    position: relative;
+}
+.txtLogo{
+    position: absolute;
+    color: white;
+    bottom:0;
+    top: 50%; 
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:60px;
+    height: 100px;
+    width:100%; 
+    text-align:center;
+}
+/* logo end */
 .a{
     justify-content: center;
     margin-top: 70px;
     background: black;
+ 
 }
 .b{
     justify-content: center;
@@ -21,6 +48,7 @@ body{
 .c, .d{
     justify-content: center;
     text-align: center;
+    background: black;
 }
 .btn{
     margin:10px;

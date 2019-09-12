@@ -1,4 +1,6 @@
 import React , { Component }from 'react';
+import { Container, Row, Col, Button} from 'react-bootstrap';
+
 
 
 class Uploader extends Component {
@@ -41,13 +43,19 @@ class Uploader extends Component {
       }
   
       return (
-        <div>
-          <form onSubmit={this._handleSubmit}>
-            <input type="file" onChange={this._handleImageChange} />  
-              {$imagePreview}
-            <button type="submit" onClick={this._handleSubmit}>Upload Image</button>
-          </form>
-        </div>
+            <>
+              <Container>
+                <Row>
+                  <Col xs={6} md={8} lg={12}>
+                    <form onSubmit={this._handleSubmit}>
+                      <Button><input type="file" onChange={this._handleImageChange} /></Button>  
+                      <div className= 'imgPrev'>{$imagePreview}</div>
+                      <button type="submit" onClick={this._handleSubmit}>Upload Image</button>
+                    </form>
+                  </Col>
+                </Row>
+              </Container>
+            </>
       )
     }
   

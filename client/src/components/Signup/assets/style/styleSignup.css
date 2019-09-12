@@ -3,10 +3,35 @@
     padding:0px;
     max-width: none;
 }
-body{
+.body{
     background: black;
-    /* background-image: url("./img/oop.jpg"); */
 }
+/* rotating logo start */
+.imgLogo{
+    animation: spin infinite 250s linear;
+}
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+/* rotating logo end */
+/* logo start */
+.logoCont{
+    position: relative;
+}
+.txtLogo{
+    position: absolute;
+    color: white;
+    bottom:0;
+    top: 50%; 
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:60px;
+    height: 100px;
+    width:100%; 
+    text-align:center;
+}
+/* logo end */
 .a{
     justify-content: center;
     margin-top: 70px;
@@ -32,4 +57,7 @@ input{
 }
 .d{
     font-size: 2vw;
+}
+.imgPrev{
+    width: 10%;
 }

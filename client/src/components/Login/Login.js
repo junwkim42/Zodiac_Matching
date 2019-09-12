@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.png';
+import Zodiac from './assets/img/zodiac.jpg';
 import './assets/style/styleLogin.css';
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -15,6 +15,7 @@ class Login extends Component {
                         <Row className='a'>
                             <Col xs={8} md={4} lg={3}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
+                                    <div className='txtLogo'>Zodiac</div>
                             </Col>
                         </Row>
                     </Container>
@@ -43,6 +44,7 @@ class Login extends Component {
                         </Row>
                     </Container>
                 </div> 
+            
             </>
         )
     }
