@@ -33,14 +33,14 @@ class Main extends Component {
                     <Container className='C'>
                         <Row className='c'>
                             <Col xs={12} md={4} lg={2}>
-                                    <Link to='/login'><Button variant="dark" size='lg'>LogIn</Button></Link> 
+                                    <Link to='/login'><Button size='lg'>LogIn</Button></Link> 
                             </Col>
                         </Row>
                     </Container>
                     <Container className='D'>
                         <Row className='d'>
                             <Col xs={12} md={4} lg={2}>
-                                    <Link to='/signup'><Button variant="info" size='lg'>SignUP</Button></Link>
+                                    <Link to='/signup'><Button className="super-colors"  size='lg'>SignUP</Button></Link>
                             </Col>
                         </Row>
                     </Container>

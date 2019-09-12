@@ -5,6 +5,7 @@
 }
 body{
     background: black;
+    /* background-image: url("./img/oop.jpg"); */
 }
 .a{
     justify-content: center;
@@ -16,7 +17,8 @@ body{
     font-size: 4vw;
     text-align: center;
     margin-top: 20px;
-    background: rgb(102, 218, 208);
+    background: black;
+    color: azure;
 }
 input{
     width: 60%;
@@ -25,6 +27,9 @@ input{
 .nonna{
     justify-content: center;
 }
-
-
-
+.c{
+    font-size: 2vw;
+}
+.d{
+    font-size: 2vw;
+}

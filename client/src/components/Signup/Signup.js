@@ -1,12 +1,12 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.png';
+import zodiac from './assets/img/zodiac.png';
 import './assets/style/styleSignup.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
-import ImageUploader from'./ImageUploader';
+import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
-
+import oop from './assets/img/oop.jpg';
 
 class Signup extends Component {
 
@@ -17,7 +17,7 @@ class Signup extends Component {
                     <Container className='A'>
                         <Row className='a'>
                             <Col xs={8} md={4} lg={3}>
-                                    <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
+                                    <Image className='imgLogo mx-auto d-block' alt='aligment' src={zodiac} roundedCircle fluid/>
                             </Col>
                         </Row>
                     </Container>
@@ -47,14 +47,25 @@ class Signup extends Component {
                                        
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Birth-Date</Form.Label>
+                                            <Container className='C'>
+                                            <Row className='c'>
+                                                 <Col xs={10} md={8} lg={5}>
                                             <Date/>
+                                            </Col>
+                                            </Row>
+                                         </Container>
                                         </Form.Group>
 
+                                        <Container className='D'>
+                                            <Row className='d'>
+                                                 <Col xs={6} md={6} lg={4}>
                                         <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Upload Image</Form.Label>
-                                            <ImageUploader/>
+                                            {/* <Form.Label>Upload Image</Form.Label> */}
+                                            <Uploader/>
                                         </Form.Group>
-                                        
+                                                 </Col>
+                                            </Row>
+                                         </Container>
                                         <Button variant="primary" type="submit">
                                             Signup
                                         </Button>
