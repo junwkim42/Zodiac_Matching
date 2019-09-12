@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.png';
+import Zodiac from './assets/img/zodiac.jpg';
 import './assets/style/styleSignup.css';
 import { Button, Container, Row, Col, Image, Form, DropdownButton, Dropdown } from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
@@ -18,6 +18,7 @@ class Signup extends Component {
                         <Row className='a'>
                             <Col xs={8} md={4} lg={3}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
+                                    <div className='txtLogo'>Zodiac</div>
                             </Col>
                         </Row>
                     </Container>
