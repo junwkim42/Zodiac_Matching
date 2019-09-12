@@ -30,19 +30,21 @@ class Matches extends Component {
                     <br/>
                     <Row>
                         <Col xs={12} md={12} lg={12}>
-                            <div class="deck">
-                                {this.state.matches.map(match => (
-                                        <Link to='/{match.id}'><UserCard
-                                        id={match.id}
-                                        name={match.name}
-                                        gender={match.gender}
-                                        age={match.age}
-                                        birthdate={match.birthdate}
-                                        profilePic={match.profilePic}
-                                        zodiacSign={match.zodiacSign}
-                                        /></Link>
-                                    ))
-                                }
+                            <div className="cardWrapper">
+                              
+                                    {this.state.matches.map(match => (
+                                            <Link to='/id'><UserCard
+                                            id={match.id}
+                                            name={match.name}
+                                            gender={match.gender}
+                                            age={match.age}
+                                            birthdate={match.birthdate}
+                                            profilePic={match.profilePic}
+                                            zodiacSign={match.zodiacSign}
+                                            /></Link>
+                                        ))
+                                    }
+                                
                             </div>
                         </Col>
                     </Row>

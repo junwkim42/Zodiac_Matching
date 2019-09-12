@@ -3,7 +3,7 @@ import "./assets/style/style.css";
 
 function UserCard(props) {
   return (
-    <div>
+    <div className="cardContainer">
       <div className="card bg-dark text-white">
           <img className="card-img" src={props.profilePic} alt={props.name}/>
           <div className="card-img-overlay">
