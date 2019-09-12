@@ -26,60 +26,24 @@ class Matches extends Component {
                     <br/>
                     <Row>
                         <Col xs={12} md={12} lg={12}>
-                        <div class="card-deck">
-                            {
-                                this.state.matches.map(match => (
-                                    <UserCard
-                                    id={match.id}
-                                    name={match.name}
-                                    gender={match.gender}
-                                    birthdate={match.birthdate}
-                                    profilePic={match.profilePic}
-                                    horoscope={}
-                                    />
-                                ))
-                            }
-
-
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                <h5 class="card-title">Username, Age</h5>
-                                <p class="card-text">Horoscope</p>
-                                <p class="card-text"><small class="text-muted">Match probability: %</small></p>
-                                </div>
+                            <div class="card-deck">
+                                {this.state.matches.map(match => (
+                                        <UserCard
+                                        id={match.id}
+                                        name={match.name}
+                                        gender={match.gender}
+                                        age={match.age}
+                                        birthdate={match.birthdate}
+                                        profilePic={match.profilePic}
+                                        zodiacSign={match.zodiacSign}
+                                        />
+                                    ))
+                                }
                             </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                <h5 class="card-title">Username, Age</h5>
-                                <p class="card-text">Horoscope</p>
-                                <p class="card-text"><small class="text-muted">Match probability: %</small></p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                <h5 class="card-title">Username, Age</h5>
-                                <p class="card-text">Horoscope</p>
-                                <p class="card-text"><small class="text-muted">Match probability: %</small></p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <img src="..." class="card-img-top" alt="..."></img>
-                                <div class="card-body">
-                                <h5 class="card-title">Username, Age</h5>
-                                <p class="card-text">Horoscope</p>
-                                <p class="card-text"><small class="text-muted">Match probability: %</small></p>
-                                </div>
-                            </div>
-                        </div>
                         </Col>
                     </Row>
                 </Container>
             </div>
-
-
         )
     }
 }

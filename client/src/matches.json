@@ -3,15 +3,18 @@
         "id": 1,
         "name": "User1",
         "gender": "",
-        "birthdate": ,
-        "profilePic":,
-        "zodiacSign"
+        "birthdate": "",
+        "age": "",
+        "profilePic": "",
+        "zodiacSign": ""
     },
     {
         "id": 2,
         "name": "User2",
         "gender": "",
-        "birthdate": ,
-        "profilePic":,
+        "birthdate": "",
+        "age": "",
+        "profilePic": "",
+        "zodiacSign": ""
     }
 ]
