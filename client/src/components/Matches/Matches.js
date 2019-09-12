@@ -2,11 +2,15 @@ import React , {Component} from 'react';
 import './assets/style/style.css';
 import { Button, Container, Row, Col, Image, DropdownButton, Dropdown} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import UserCard from "././components/UserCard/";
-import matches from "./matches.json";
+import UserCard from "../../components/UserCard/UserCard";
+import matches from "../../matches.json";
 
 
 class Matches extends Component {
+
+    state = {
+        matches
+      };
 
     render(){
         return(
@@ -26,9 +30,9 @@ class Matches extends Component {
                     <br/>
                     <Row>
                         <Col xs={12} md={12} lg={12}>
-                            <div class="card-deck">
+                            <div class="deck">
                                 {this.state.matches.map(match => (
-                                        <UserCard
+                                        <Link to='/{match.id}'><UserCard
                                         id={match.id}
                                         name={match.name}
                                         gender={match.gender}
@@ -36,7 +40,7 @@ class Matches extends Component {
                                         birthdate={match.birthdate}
                                         profilePic={match.profilePic}
                                         zodiacSign={match.zodiacSign}
-                                        />
+                                        /></Link>
                                     ))
                                 }
                             </div>

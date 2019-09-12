@@ -39,8 +39,8 @@ class Profile extends Component {
                 </Container>
                 <br/>
                 <Container>
-                    <Row className='dailyH'>
-                        <Col xs={9} md={4} lg={12}>
+                    <Row className='horoscope'>
+                        <Col xs={10} md={10} lg={12}>
                         "This is your daily Horoscope. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
                         </Col>
                     </Row>
