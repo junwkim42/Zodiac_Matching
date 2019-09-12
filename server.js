@@ -3,7 +3,7 @@ const express = require("express");
 
 const mongoose = require("mongoose");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 
 //const routes = require("./routes");
 
@@ -20,7 +20,7 @@ if (process.env.NODE_ENV === "production") {
 //app.use(routes);
 
 require("./routes/auth")(app);
-require("./routes/pages")(app);
+
 
 
 

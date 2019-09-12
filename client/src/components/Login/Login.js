@@ -48,7 +48,7 @@ class Login extends Component {
                                 <Form>
                                     <Form.Group controlId="formBasicUsername">
                                         <Form.Label>Username</Form.Label>
-                                        <Input
+                                        <Form.Input
                                             value={this.state.username}
                                             onChange={this.handleInputChange} 
                                             name="username" 
@@ -57,7 +57,7 @@ class Login extends Component {
                                     </Form.Group>
                                     <Form.Group controlId="formBasicPassword">
                                         <Form.Label>Password</Form.Label>
-                                        <Input
+                                        <Form.Input
                                             value={this.state.password}
                                             onChange={this.handleInputChange}
                                             name="password"
