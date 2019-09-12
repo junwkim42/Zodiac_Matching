@@ -4,7 +4,7 @@ import './assets/style/styleSignup.css';
 import { Button, Container, Row, Col, Image, Form, DropdownButton, Dropdown } from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
-import ImageUploader from'./Image';
+import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
 
 
@@ -57,8 +57,8 @@ class Signup extends Component {
                                         </DropdownButton>
 
                                         <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Upload Image</Form.Label>
-                                            <ImageUploader/>
+                                            {/* <Form.Label>Upload Image</Form.Label> */}
+                                            <Uploader/>
                                         </Form.Group>
                                         
                                         <Button variant="primary" type="submit">
