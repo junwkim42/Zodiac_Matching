@@ -17,17 +17,9 @@ class Main extends Component {
  
                     <Container className='A'>
                         <Row className='a'>
-<<<<<<< HEAD
-                            <Col xs={8} md={4} lg={3}>
-                                <div className='logoCont'>
-                                    <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
-                                    <div className='txtLogo'>Zodiac</div>
-                                </div>
-=======
                             <Col xs={8} md={4} lg={4}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
                                     <div className='txtLogo'>Zodiac</div>
->>>>>>> quinn
                             </Col>
                         </Row>
                     </Container>
