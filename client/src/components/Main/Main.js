@@ -12,6 +12,8 @@ class Main extends Component {
 <>
   
                 <div className='imgCont'>
+
+                    <div className="infoDiv">
  
                     <Container className='A'>
                         <Row className='a'>
@@ -29,18 +31,22 @@ class Main extends Component {
                     </br>
                     <Container className='C'>
                         <Row className='c'>
-                            <Col xs={12} md={4} lg={2}>
+                            <Col xs={12} md={4} lg={4}>
                                     <Link to='/login'><Button size='lg'>LogIn</Button></Link> 
                             </Col>
                         </Row>
                     </Container>
+                    <br>
+                    </br>
+                    
                     <Container className='D'>
                         <Row className='d'>
-                            <Col xs={12} md={4} lg={2}>
+                            <Col xs={12} md={4} lg={4}>
                                     <Link to='/signup'><Button className="super-colors"  size='lg'>SignUP</Button></Link>
                             </Col>
                         </Row>
                     </Container>
+                    </div>
                 </div> 
          
             </>
