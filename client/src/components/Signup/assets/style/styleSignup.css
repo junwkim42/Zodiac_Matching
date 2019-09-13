@@ -3,9 +3,21 @@
     padding:0px;
     max-width: none;
 }
-body{
-    background: red;
+.body{
+    background: black;
 }
+<<<<<<< HEAD
+=======
+/* rotating logo start */
+.imgLogo{
+    animation: spin infinite 250s linear;
+}
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+/* rotating logo end */
+>>>>>>> quinn
 /* logo start */
 .logoCont{
     position: relative;
@@ -26,14 +38,15 @@ body{
 .a{
     justify-content: center;
     margin-top: 70px;
-    background: blue;
+    background: black;
 }
 .b{
     justify-content: center;
     font-size: 4vw;
     text-align: center;
     margin-top: 20px;
-    background: yellow;
+    background: black;
+    color: azure;
 }
 input{
     width: 60%;
@@ -42,6 +55,7 @@ input{
 .nonna{
     justify-content: center;
 }
+<<<<<<< HEAD
 .dropdown-toggle, .dropdown-item{
     width: 60%;
     font-size: 4vw;
@@ -51,3 +65,14 @@ input{
 }
 
 
+=======
+.c{
+    font-size: 2vw;
+}
+.d{
+    font-size: 2vw;
+}
+.imgPrev{
+    width: 10%;
+}
+>>>>>>> quinn

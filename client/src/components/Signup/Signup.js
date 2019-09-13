@@ -1,5 +1,9 @@
 import React , {Component} from 'react';
+<<<<<<< HEAD
 import Zodiac from './assets/img/zodiac.jpg';
+=======
+import zodiac from './assets/img/zodiac.jpg';
+>>>>>>> quinn
 import './assets/style/styleSignup.css';
 import { Button, Container, Row, Col, Image, Form, DropdownButton, Dropdown } from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
@@ -13,11 +17,16 @@ class Signup extends Component {
     render(){
         return(
             <>
+           
                 <div className='imgCont'>
                     <Container className='A'>
                         <Row className='a'>
                             <Col xs={8} md={4} lg={3}>
+<<<<<<< HEAD
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
+=======
+                                    <Image className='imgLogo mx-auto d-block' alt='aligment' src={zodiac} roundedCircle fluid/>
+>>>>>>> quinn
                                     <div className='txtLogo'>Zodiac</div>
                             </Col>
                         </Row>
@@ -48,20 +57,34 @@ class Signup extends Component {
                                        
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Birth-Date</Form.Label>
+                                            <Container className='C'>
+                                            <Row className='c'>
+                                                 <Col xs={10} md={8} lg={5}>
                                             <Date/>
+                                            </Col>
+                                            </Row>
+                                         </Container>
                                         </Form.Group>
 
+<<<<<<< HEAD
                                         <DropdownButton id="dropdown-basic-button" title="Gender">
                                             <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
                                         </DropdownButton>
 
+=======
+                                        <Container className='D'>
+                                            <Row className='d'>
+                                                 <Col xs={6} md={6} lg={4}>
+>>>>>>> quinn
                                         <Form.Group controlId="formBasicPassword">
                                             {/* <Form.Label>Upload Image</Form.Label> */}
                                             <Uploader/>
                                         </Form.Group>
-                                        
+                                                 </Col>
+                                            </Row>
+                                         </Container>
                                         <Button variant="primary" type="submit">
                                             Signup
                                         </Button>
@@ -74,6 +97,7 @@ class Signup extends Component {
                         </Row>
                     </Container>
                 </div> 
+       
             </>
         )
     }
