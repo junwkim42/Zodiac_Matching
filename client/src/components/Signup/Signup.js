@@ -1,11 +1,7 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.jpg';
 import './assets/style/styleSignup.css';
-<<<<<<< HEAD
 import { Button, Container, Row, Col, Image, Form, DropdownButton, Dropdown } from 'react-bootstrap';
-=======
-import { Button, Container, Row, Col, Image, Form, Card} from 'react-bootstrap';
->>>>>>> junwon
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
 import Uploader from'./Uploader';
