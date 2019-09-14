@@ -26,7 +26,7 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
           })
-            //.then(res => )
+            // .then(res => )
             .catch(err => console.log(err));
         }
       };
