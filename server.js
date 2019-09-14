@@ -25,7 +25,9 @@ require("./routes/auth")(app);
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zodiac");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zodiac", { useNewUrlParser: true })
+    .then(()=>console.log("MongoDB connected"))
+    .catch(err => console.log(err));
 
 // Start the API server
 app.listen(PORT, function() {
