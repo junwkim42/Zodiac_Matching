@@ -74,9 +74,9 @@ class Signup extends Component {
                                                  </Col>
                                             </Row>
                                          </Container>
-                                        <Button variant="primary" type="submit">
+                                        <Link to='/login'><Button variant="primary" type="submit">
                                             Signup
-                                        </Button>
+                                        </Button></Link>
 
                                         <Link to='/'><Button variant="primary" type="submit">
                                             Cancel
