@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import './assets/style/style.css';
+import './assets/style/styleProfile.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
