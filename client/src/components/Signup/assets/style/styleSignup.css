@@ -6,6 +6,7 @@
 .body{
     background: black;
 }
+<<<<<<< HEAD
 /* logo start */
 .logoCont{
     position: relative;
@@ -24,6 +25,9 @@
 }
 /* logo end */
 .a{
+=======
+.picCont{
+>>>>>>> d
     justify-content: center;
     margin-top: 70px;
     background: black;
