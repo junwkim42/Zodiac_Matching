@@ -20,6 +20,8 @@ if (process.env.NODE_ENV === "production") {
 //app.use(routes);
 
 require("./routes/auth")(app);
+app.use('/', require('./routes/index'));
+app.use('/users', require('./routes/users'));
 
 
 
