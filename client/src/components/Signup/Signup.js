@@ -71,17 +71,12 @@ class Signup extends Component {
                                             {/* <Form.Label>Upload Image</Form.Label> */}
                                             <Uploader/>
                                         </Form.Group>
-<<<<<<< HEAD
                                                  </Col>
                                             </Row>
                                          </Container>
                                         <Button variant="primary" type="submit">
-=======
-                                        
-                                        <Link to='/profile'><Button variant="primary" type="submit">
->>>>>>> d
                                             Signup
-                                        </Button></Link>
+                                        </Button>
 
                                         <Link to='/'><Button variant="primary" type="submit">
                                             Cancel

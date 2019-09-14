@@ -6,7 +6,6 @@
 body{
     background: black;
 }
-<<<<<<< HEAD
 /* rotating logo start */
 .imgLogo{
     animation: spin infinite 250s linear;
@@ -33,10 +32,8 @@ body{
     text-align:center;
 }
 /* logo end */
+
 .a{
-=======
-.picCont{
->>>>>>> d
     justify-content: center;
     margin-top: 70px;
     background: black;

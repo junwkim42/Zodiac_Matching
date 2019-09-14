@@ -56,7 +56,6 @@ class Login extends Component {
                                             placeholder="Enter Username"
                                         />
                                     </Form.Group>
-<<<<<<< HEAD
                                     <Form.Group controlId="formBasicPassword">
                                         <Form.Label>Password</Form.Label>
                                         <Form.Input
@@ -71,16 +70,8 @@ class Login extends Component {
                                             disabled={!(this.state.author && this.state.title)}
                                             onClick={this.handleFormSubmit}
                                         >
-=======
-
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
-                                        </Form.Group>
-                                        <Link to='/profile'><Button variant="primary" type="submit">
->>>>>>> d
                                             Login
-                                        </Button></Link>
+                                        </Button>
 
                                         <Link to='/'><Button variant="primary" type="submit">
                                             Cancel
