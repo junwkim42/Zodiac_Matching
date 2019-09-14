@@ -46,7 +46,7 @@ class Login extends Component {
                     <Container className='B'>
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
-                                <Form>
+                                <Form onSubmit={this.handleFormSubmit}>
                                     <Form.Group controlId="formBasicUsername">
                                         <Form.Label>Username</Form.Label>
                                         <Form.Input
