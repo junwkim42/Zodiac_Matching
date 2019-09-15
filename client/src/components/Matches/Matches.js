@@ -28,12 +28,42 @@ class Matches extends Component {
                         </DropdownButton>
                     </Row>
                     <br/>
+                    
+{/* <div>
+     {(() => {
+       switch(state.choice) {
+         case 'male':
+           matchesList.map(m => {
+        if(m.gender == "male") {
+        return (
+        <div>m.name</div>
+        )
+        }
+    }
+         case 'female':
+           matchesList.map(m => {
+        if(m.gender == "female") {
+        return (
+        <div>m.name</div>
+        )
+        }
+    }
+         default:
+           matchesList.map(m => {
+        return (
+        <div>m.name</div>
+        )
+        }
+       }
+     })()}
+</div> */}
+
                     <Row>
                         <Col xs={12} md={12} lg={12}>
                             <div className="cardWrapper">
                               
                                     {this.state.matches.map(match => (
-                                            <Link to='/id'><UserCard
+                                            <Link to='matches/:id'><UserCard
                                             id={match.id}
                                             name={match.name}
                                             gender={match.gender}

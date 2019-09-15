@@ -47,12 +47,12 @@ class Profile extends Component {
                 </Container>
                 <br/>
                 <Container className='D'>
-                        <Row className='d'>
-                            <Col xs={12} md={4} lg={2}>
-                                    <Link to='/matches'><Button variant="warning" size='lg'>Find Matches</Button></Link>
-                            </Col>
-                        </Row>
-                    </Container>
+                    <Row className='d'>
+                        <Col xs={12} md={4} lg={2}>
+                                <Link to='/matches'><Button variant="warning" size='lg'>Find Matches</Button></Link>
+                        </Col>
+                    </Row>
+                </Container>
 
             </div>
         )
