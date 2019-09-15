@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
-import './assets/style/styleSignup.css';
+import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';

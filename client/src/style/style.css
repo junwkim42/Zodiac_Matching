@@ -1,0 +1,140 @@
+* {
+    margin:0px;
+    padding:0px;
+    color: white;
+    /* max-width: none; */
+}
+
+body {
+    background-image: url(../images/under_the_stars_final_edited.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.a
+{
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.b {
+    justify-content: center;
+    font-size: 4vw;
+    text-align: center;
+    margin-top: 20px;
+    /* background: yellow; */
+}
+
+.c, .d {
+    justify-content: center;
+    text-align: center;
+}
+
+/* .disclaimer {
+    justify-content: center;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 1;
+    font-size: 50%;
+} */
+
+.btn {
+    margin-bottom: 20px;
+    width: 100%;
+    background: none;
+    font-size: 15px;
+    padding: 18px 0px;
+    border-radius: 0px;
+}   
+
+.C {
+    min-width: 50vw;
+}
+
+.imgCont {
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.form-control {
+    text-align: center;
+}
+
+.label {
+    justify-content: center;
+    text-align: center;
+}
+
+.horoscope {
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+}
+
+.picCont
+{
+    justify-content: center;
+    margin-top: 70px;
+    /* background: blue; */
+}
+
+/* input
+{
+    width: 60%;
+    text-align: center;
+} */
+
+.nonna
+{
+    justify-content: center;
+}
+
+/* ======    cards    ========= */
+
+.cardWrapper {
+    text-align: center;
+    border: solid;
+    border-color: green;
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+}
+
+.cardWrapper > div {
+    margin: 3.5%;
+    border-radius: 0px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    border-width: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    max-width: 430px;
+    height: 200px;
+    width: 200px;
+}
+
+.card-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 90%;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.card-text {
+    margin: 0;
+    font-size: 75%;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.card-img-overlay {
+    padding: 3% 3%;
+}

@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
-import './assets/style/style.css';
+import '../../style/style.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -18,28 +18,34 @@ class Main extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    <Container className='B'>
+                    {/* <Container className='B'>
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
                                 Zodiac
                             </Col>
                         </Row>
-                    </Container>
-                    
+                    </Container> */}
+                    <br></br>
+                    <br></br>
                     <Container className='C'>
                         <Row className='c'>
-                            <Col xs={12} md={4} lg={2}>
-                                    <Link to='/login'><Button variant="success" size='lg'>LogIn</Button></Link> 
+                            <Col xs={7} md={5} lg={2}>
+                                    <Link to='/login'><Button size='lg'>LOGIN</Button></Link> 
                             </Col>
                         </Row>
-                    </Container>
-                    <Container className='D'>
                         <Row className='d'>
-                            <Col xs={12} md={4} lg={2}>
-                                    <Link to='/signup'><Button variant="warning" size='lg'>SignUP</Button></Link>
+                            <Col xs={7} md={5} lg={2}>
+                                    <Link to='/signup'><Button size='lg'>SIGNUP</Button></Link>
                             </Col>
                         </Row>
                     </Container>
+                    {/* <Container>
+                        <Row className='disclaimer'>
+                            <Col xs={10} md={10} lg={12}>
+                                    By using this app, you agree to our terms. <br></br> Learn how we process your data by contacting us and asking for our Privary Policy.
+                            </Col>
+                        </Row>
+                    </Container> */}
                 </div> 
             </>
         )

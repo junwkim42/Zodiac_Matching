@@ -1,6 +1,6 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.png';
-import './assets/style/styleLogin.css';
+import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
