@@ -1,12 +1,7 @@
 import React , {Component} from 'react';
-<<<<<<< HEAD
 import Zodiac from './assets/img/zodiac.jpg';
-import './assets/style/styleLogin.css';
-import API from '../utils/API';
-=======
-import Zodiac from './assets/img/zodiac.png';
 import '../../style/style.css';
->>>>>>> d
+import API from '../utils/API'
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -39,61 +34,11 @@ class Login extends Component {
     render(){
         return(
             <>
-<<<<<<< HEAD
-                <div className='imgCont'>
-                    <Container className='A'>
-                        <Row className='a'>
-                            <Col xs={8} md={4} lg={3}>
-                                    <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
-                                    <div className='txtLogo'>Zodiac</div>
-                            </Col>
-                        </Row>
-                    </Container>
-                    <Container className='B'>
-                        <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
-                                <Form onSubmit={this.handleFormSubmit}>
-                                    <Form.Group controlId="formBasicUsername">
-                                        <Form.Label>Username</Form.Label>
-                                        <Form.Input
-                                            value={this.state.username}
-                                            onChange={this.handleInputChange} 
-                                            name="username" 
-                                            placeholder="Enter Username"
-                                        />
-                                    </Form.Group>
-                                    <Form.Group controlId="formBasicPassword">
-                                        <Form.Label>Password</Form.Label>
-                                        <Form.Input
-                                            value={this.state.password}
-                                            onChange={this.handleInputChange}
-                                            name="password"
-                                            placeholder="Password" 
-                                        />
-                                    </Form.Group>
-                                       <Link to='/profile'> <Button 
-                                            variant="primary" 
-                                            disabled={!(this.state.author && this.state.title)}
-                                            onClick={this.handleFormSubmit}
-                                        >
-                                            Login
-                                        </Button>
-                                        </Link>
-
-                                        <Link to='/'><Button variant="primary" type="submit">
-                                            Cancel
-                                        </Button></Link>
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div> 
-            
-=======
                 <Container className='A'>
                     <Row className='a'>
                         <Col xs={8} md={4} lg={3}>
                                 <Image className='imgLogo mx-auto d-block' alt='alignment' src={Zodiac} roundedCircle fluid/>
+                                <div className='txtLogo'>Zodiac</div>
                         </Col>
                     </Row>
                 </Container>
@@ -120,7 +65,6 @@ class Login extends Component {
                         </Col>
                     </Row>
                 </Container>
->>>>>>> d
             </>
         )
     }

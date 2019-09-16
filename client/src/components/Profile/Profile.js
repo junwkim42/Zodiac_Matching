@@ -1,9 +1,5 @@
 import React , {Component} from 'react';
-<<<<<<< HEAD
-import './assets/style/styleProfile.css';
-=======
 import '../../style/style.css';
->>>>>>> d
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";
@@ -22,7 +18,7 @@ class Profile extends Component {
                 <Container>
                     <Row className='picCont'>
                         <Col xs={8} md={4} lg={3}>
-                                <Image className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
+                                <Image className='profile mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
                         </Col>
                     </Row>
                 </Container>
@@ -34,13 +30,13 @@ class Profile extends Component {
                     </Row>
                 </Container>
                     
-                <Container>
+                {/* <Container>
                     <Row className='picCont'>
                         <Col xs={8} md={4} lg={3}>
-                                <Image className='imgLogo mx-auto d-block' alt="profile picture" src='import from database' roundedCircle fluid/>
+                                <Image className='profile mx-auto d-block' alt="profile picture" src='import from database' roundedCircle fluid/>
                         </Col>
                     </Row>
-                </Container>
+                </Container> */}
                 <Container>
                     <Row className='label'>
                         <Col xs={8} md={4} lg={3}>

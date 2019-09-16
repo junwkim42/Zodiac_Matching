@@ -1,10 +1,6 @@
 import React from "react";
-<<<<<<< HEAD
-import "./assets/style/styleUserCard.css";
-=======
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image, DropdownButton, Dropdown} from 'react-bootstrap';
->>>>>>> d
 
 function UserCard(props) {
   return (
