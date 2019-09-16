@@ -99,6 +99,27 @@ class Signup extends Component {
                                             <Form.Control type="password" placeholder="Confirm Password" />
                                         </Form.Group>
                                        
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                        <Form.Group controlId="formBasicPassword">
+                                            <Form.Label>Birth-Date</Form.Label>
+                                            <Container className='C'>
+                                            <Row className='c'>
+                                                 <Col xs={10} md={8} lg={5}>
+                                            <Date/>
+                                            </Col>
+                                            </Row>
+                                         </Container>
+                                        </Form.Group>
+
+                                        <DropdownButton id="dropdown-basic-button" title="Gender">
+                                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
+                                        </DropdownButton>
+=======
+>>>>>>> junwon
                                         <Form.Group controlId="formBasicBirthDate">
                                             <Form.Label>Birth Date</Form.Label>
                                             <Form.Control                                           
@@ -130,22 +151,44 @@ class Signup extends Component {
                                             <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
                                         </DropdownButton> */}
+<<<<<<< HEAD
+=======
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+>>>>>>> junwon
 
                                         <Container className='D'>
                                             <Row className='d'>
                                                  <Col xs={6} md={6} lg={4}>
                                         <Form.Group controlId="formBasicPassword">
                                             {/* <Form.Label>Upload Image</Form.Label> */}
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+                                            <Uploader/>
+=======
+>>>>>>> junwon
 
 
                                             <Uploader handleFileChange = {this.handleFileChange} />
 
 
+<<<<<<< HEAD
+=======
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+>>>>>>> junwon
                                         </Form.Group>
                                                  </Col>
                                             </Row>
                                          </Container>
+<<<<<<< HEAD
                                         <Button variant="primary" onClick={this.handleFormSubmit}>
+=======
+<<<<<<< HEAD
+                                        <Link to='/login'><Button variant="primary" type="submit">
+=======
+                                        <Button variant="primary" onClick={this.handleFormSubmit}>
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+>>>>>>> junwon
                                             Signup
                                         </Button>
 

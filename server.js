@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+=======
+>>>>>>> junwon
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
@@ -63,4 +68,8 @@ app.listen(PORT, function() {
 =======
   console.log('Server is running on PORT', PORT);
 });
+<<<<<<< HEAD
 >>>>>>> tj
+=======
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+>>>>>>> junwon

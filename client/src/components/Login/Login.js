@@ -1,7 +1,17 @@
 import React , {Component} from 'react';
+<<<<<<< HEAD
 import Zodiac from './assets/img/zodiac.jpg';
 import '../../style/style.css';
 import API from '../utils/API'
+=======
+<<<<<<< HEAD
+import Zodiac from './assets/img/zodiac.jpg';
+=======
+import Zodiac from '../Login/assets/img/zodiac.jpg';
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+import './assets/style/styleLogin.css';
+import axios from "axios";
+>>>>>>> junwon
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
@@ -27,7 +37,15 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
           })
+<<<<<<< HEAD
             .then(res => console.log(res))
+=======
+<<<<<<< HEAD
+            // .then(res => )
+=======
+            .then(res => console.log(res))
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+>>>>>>> junwon
             .catch(err => console.log(err));
         }
       };

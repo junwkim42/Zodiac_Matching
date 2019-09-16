@@ -7,6 +7,11 @@
     background: black;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+.picCont{
+=======
+>>>>>>> junwon
 /* logo start */
 .logoCont{
     position: relative;
@@ -25,8 +30,12 @@
 }
 /* logo end */
 .a{
+<<<<<<< HEAD
 =======
 .picCont{
+>>>>>>> junwon
+=======
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
 >>>>>>> junwon
     justify-content: center;
     margin-top: 70px;
