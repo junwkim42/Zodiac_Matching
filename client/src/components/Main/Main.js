@@ -21,13 +21,6 @@ class Main extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    {/* <Container className='B'>
-                        <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
-                                Zodiac
-                            </Col>
-                        </Row>
-                    </Container> */}
                     <br></br>
                     <br></br>
                     <Container className='C'>
@@ -51,8 +44,7 @@ class Main extends Component {
                         </Row>
                     </Container>
                 </div> 
-         
-            </>
+                </>
         )
     }
 }
