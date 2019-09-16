@@ -24,17 +24,26 @@ class Signup extends Component {
         });
       };
 
+    handleFileChange = (file) => {
+        this.setState({
+            file: file
+        });
+    }  
+
     handleFormSubmit = event => {
-        alert("hello!");
+        //alert("hello!");
+        
         event.preventDefault();
-        console.log(this.state.username);
+        console.log(`staet:`, this.state);
         console.log(this.state.password);
         console.log(this.state.birthDate);
-        if (this.state.username && this.state.password && this.state.birthDate) {
+        if (this.state.username && this.state.password && this.state.birthDate && this.state.gender && this.state.file) {
           axios.post("/join", {
             username: this.state.username,
             password: this.state.password,
-            birthDate: this.state.birthDate
+            birthDate: this.state.birthDate,
+            gender: this.state.gender,
+            file: this.state.file           
           })
             .then(res => console.log(res))
             .catch(err => console.log(err));
@@ -57,7 +66,7 @@ class Signup extends Component {
                     <Container className='B'>
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
-                                <Form>
+                                <Form onSubmit={this.handleFormSubmit}>
                                 <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Name</Form.Label>
                                         <Form.Control
@@ -98,19 +107,40 @@ class Signup extends Component {
                                             name="birthDate"
                                             placeholder="DD/MM/YYYY"  />
                                         </Form.Group>
+                                    
+                                        <Form.Group controlId="formBasicGender">
+                                        <Form.Label>Gender</Form.Label>
+                                        <Form.Control 
+                                            value={this.state.gender}
+                                            onChange={this.handleInputChange}
+                                            name="gender"
+                                            as="select">
+                                            <option>Select gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>UnKnown</option>
+                                            
+                                        </Form.Control>
+                                        </Form.Group>
 
-                                        <DropdownButton id="dropdown-basic-button" title="Gender">
+                                        {/* <DropdownButton 
+                                            value={this.state.gender}
+                                            onChange={() => alert("hello")} id="dropdown-basic-button" title="Gender">
                                             <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
                                             <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
-                                        </DropdownButton>
+                                        </DropdownButton> */}
 
                                         <Container className='D'>
                                             <Row className='d'>
                                                  <Col xs={6} md={6} lg={4}>
                                         <Form.Group controlId="formBasicPassword">
                                             {/* <Form.Label>Upload Image</Form.Label> */}
-                                            <Uploader/>
+
+
+                                            <Uploader handleFileChange = {this.handleFileChange} />
+
+
                                         </Form.Group>
                                                  </Col>
                                             </Row>

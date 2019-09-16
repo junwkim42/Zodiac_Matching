@@ -31,6 +31,8 @@ class Uploader extends Component {
       }
   
       reader.readAsDataURL(file)
+      // passing back to parents
+      this.props.handleFileChange(file);
     }
   
     render() {
@@ -43,8 +45,8 @@ class Uploader extends Component {
       return (
         <div>
           <form onSubmit={this._handleSubmit}>
-            <input type="file" onChange={this._handleImageChange} />
-            <button type="submit" onClick={this._handleSubmit}>Upload Image</button>
+            <input type="file" name="image" onChange={this._handleImageChange} />
+            {/* <button type="submit" onClick={this._handleSubmit}>Upload Image</button> */}
           </form>
           {$imagePreview}
         </div>
