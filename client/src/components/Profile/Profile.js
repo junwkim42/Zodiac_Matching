@@ -53,8 +53,9 @@ class Profile extends Component {
                     </Row>
                 </Container>
                 <br/>
+                <br/>
                 <Container>
-                <Col xs={12} md={12} lg={12}>
+                    <Col xs={12} md={12} lg={12}>
                             <Wrapper>
                                     {this.state.matches.map(match => (
                                             <Link to='matches/:id'><UserCard
@@ -68,8 +69,8 @@ class Profile extends Component {
                                             /></Link>
                                         ))
                                     }
-                           </Wrapper>
-                        </Col>
+                            </Wrapper>
+                    </Col>
                 </Container>
                 {/* <Container className='D'>
                     <Row className='d'>
@@ -78,8 +79,9 @@ class Profile extends Component {
                         </Col>
                     </Row>
                 </Container> */}
-
+            <br/>
             </div>
+        
         )
     }
 }

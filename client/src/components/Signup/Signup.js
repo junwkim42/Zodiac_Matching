@@ -149,7 +149,7 @@ class Signup extends Component {
                                             Signup
                                         </Button>
 
-                                    <Link to='/'><Button type="submit" className='genericBtn'>
+                                    <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
                                         CANCEL
                                     </Button></Link>
                                 </Form>
