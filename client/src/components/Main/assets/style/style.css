@@ -6,6 +6,7 @@
 body{
     background: black;
 }
+<<<<<<< HEAD
 /* rotating logo start */
 .imgLogo{
     animation: spin infinite 250s linear;
@@ -34,6 +35,9 @@ body{
 /* logo end */
 
 .a{
+=======
+.picCont{
+>>>>>>> junwon
     justify-content: center;
     margin-top: 70px;
     background: black;
