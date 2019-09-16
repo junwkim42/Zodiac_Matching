@@ -39,13 +39,14 @@ class Main extends Component {
                             </Col>
                         </Row>
                     </Container>
-                    {/* <Container>
+                    <br></br>
+                    <Container>
                         <Row className='disclaimer'>
                             <Col xs={10} md={10} lg={12}>
-                                    By using this app, you agree to our terms. <br></br> Learn how we process your data by contacting us and asking for our Privary Policy.
+                                    By using this app, you agree to our terms. Learn how we process your data by contacting us and asking for our Privary Policy.
                             </Col>
                         </Row>
-                    </Container> */}
+                    </Container>
                 </div> 
             </>
         )

@@ -3,7 +3,9 @@ import '../../style/style.css';
 import { Button, Container, Row, Col, Image, DropdownButton, Dropdown} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";
+import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
+
 
 
 class Matches extends Component {
@@ -15,8 +17,8 @@ class Matches extends Component {
     render(){
         return(
             <div>
+                <br/>
                 <Container>
-                    <br/>
                     <Row>
                         <Col xs={12} md={12} lg={12}>
                         Matches
@@ -27,7 +29,8 @@ class Matches extends Component {
                             <Dropdown.Item href="#/action-3">Both</Dropdown.Item>
                         </DropdownButton>
                     </Row>
-                    <br/>
+                </Container>
+                <br/>
                     
 {/* <div>
      {(() => {
@@ -57,11 +60,9 @@ class Matches extends Component {
        }
      })()}
 </div> */}
-
-                    <Row>
+                <Container>
                         <Col xs={12} md={12} lg={12}>
-                            <div className="cardWrapper">
-                              
+                            <Wrapper>
                                     {this.state.matches.map(match => (
                                             <Link to='matches/:id'><UserCard
                                             id={match.id}
@@ -74,10 +75,8 @@ class Matches extends Component {
                                             /></Link>
                                         ))
                                     }
-                                
-                            </div>
+                           </Wrapper>
                         </Col>
-                    </Row>
                 </Container>
             </div>
         )
