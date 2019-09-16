@@ -10,9 +10,7 @@ class Main extends Component {
     
 
     render(){
-        return(
-<>
-  
+        return(   
                 <div className='imgCont'>
  
                     <Container className='A'>
@@ -44,8 +42,6 @@ class Main extends Component {
                         </Row>
                     </Container>
                 </div> 
-         
-            </>
         )
     }
 }

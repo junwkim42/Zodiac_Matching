@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.jpg';
+import Zodiac from '../Login/assets/img/zodiac.jpg';
 import './assets/style/styleLogin.css';
-import API from '../utils/API';
+import axios from "axios";
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -21,12 +21,12 @@ class Login extends Component {
 
     handleFormSubmit = event => {
         event.preventDefault();
-        if (this.state.title && this.state.author) {
-          API.userLogin({
+        if (this.state.username && this.state.password) {
+          axios.post("/login", {
             username: this.state.username,
             password: this.state.password
           })
-            // .then(res => )
+            .then(res => console.log(res))
             .catch(err => console.log(err));
         }
       };
@@ -49,7 +49,7 @@ class Login extends Component {
                                 <Form onSubmit={this.handleFormSubmit}>
                                     <Form.Group controlId="formBasicUsername">
                                         <Form.Label>Username</Form.Label>
-                                        <Form.Input
+                                        <Form.Control
                                             value={this.state.username}
                                             onChange={this.handleInputChange} 
                                             name="username" 
@@ -58,7 +58,7 @@ class Login extends Component {
                                     </Form.Group>
                                     <Form.Group controlId="formBasicPassword">
                                         <Form.Label>Password</Form.Label>
-                                        <Form.Input
+                                        <Form.Control
                                             value={this.state.password}
                                             onChange={this.handleInputChange}
                                             name="password"

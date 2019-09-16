@@ -6,9 +6,40 @@ import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
 import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 
 class Signup extends Component {
+    state = {
+        name: "",
+        username: "",
+        password: "",
+        birthDate: ""
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+
+    handleFormSubmit = event => {
+        alert("hello!");
+        event.preventDefault();
+        console.log(this.state.username);
+        console.log(this.state.password);
+        console.log(this.state.birthDate);
+        if (this.state.username && this.state.password && this.state.birthDate) {
+          axios.post("/join", {
+            username: this.state.username,
+            password: this.state.password,
+            birthDate: this.state.birthDate
+          })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        }
+      };
 
     render(){
         return(
@@ -29,17 +60,29 @@ class Signup extends Component {
                                 <Form>
                                 <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Name</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter Name" />
+                                        <Form.Control
+                                            value={this.state.name}
+                                            onChange={this.handleInputChange} 
+                                            name="name" 
+                                            placeholder="Enter Name" />
                                     </Form.Group>
 
                                     <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Username</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter Username" />
+                                        <Form.Control                                             
+                                            value={this.state.username}
+                                            onChange={this.handleInputChange} 
+                                            name="username" 
+                                            placeholder="Enter Username" />
                                     </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
+                                            <Form.Control                                           
+                                            value={this.state.password}
+                                            onChange={this.handleInputChange}
+                                            name="password"
+                                            placeholder="Password"  />
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
@@ -47,15 +90,13 @@ class Signup extends Component {
                                             <Form.Control type="password" placeholder="Confirm Password" />
                                         </Form.Group>
                                        
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Birth-Date</Form.Label>
-                                            <Container className='C'>
-                                            <Row className='c'>
-                                                 <Col xs={10} md={8} lg={5}>
-                                            <Date/>
-                                            </Col>
-                                            </Row>
-                                         </Container>
+                                        <Form.Group controlId="formBasicBirthDate">
+                                            <Form.Label>Birth Date</Form.Label>
+                                            <Form.Control                                           
+                                            value={this.state.birthDate}
+                                            onChange={this.handleInputChange}
+                                            name="birthDate"
+                                            placeholder="DD/MM/YYYY"  />
                                         </Form.Group>
 
                                         <DropdownButton id="dropdown-basic-button" title="Gender">
@@ -74,7 +115,7 @@ class Signup extends Component {
                                                  </Col>
                                             </Row>
                                          </Container>
-                                        <Button variant="primary" type="submit">
+                                        <Button variant="primary" onClick={this.handleFormSubmit}>
                                             Signup
                                         </Button>
 

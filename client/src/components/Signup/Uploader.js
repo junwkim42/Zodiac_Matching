@@ -37,7 +37,7 @@ class Uploader extends Component {
       let {imagePreviewUrl} = this.state;
       let $imagePreview = null;
       if (imagePreviewUrl) {
-        $imagePreview = (<img src={imagePreviewUrl} />);
+        $imagePreview = (<img alt="userimg" src={imagePreviewUrl} />);
       }
   
       return (

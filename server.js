@@ -3,9 +3,10 @@ const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
 const passport = require('passport');
+const path = require('path');
 
 const app = express();
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3001;
 
 require('./config/passport')(passport);
 
@@ -13,9 +14,9 @@ require('./config/passport')(passport);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Serve up static assets (usually on heroku)
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static("client/build"));
-}
+// if (process.env.NODE_ENV === "production") {}
+  app.use(express.static(path.join(__dirname, "client/build")));
+
 
 app.use(session({
     secret: 'secret',
@@ -30,6 +31,9 @@ app.use(passport.session());
 //app.use(routes);
 
 require("./routes/auth")(app);
+app.get("*", function(req, res){
+  res.sendFile(path.join(__dirname + "/client/build/index.html"));
+});
 
 
 // Connect to the Mongo DB
