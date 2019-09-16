@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url(../images/under_the_stars_final_edited.jpg);
+    background-image: url(../images/under_the_stars_final_edited_2.jpg);
     background-attachment: fixed;
     background-position: center;
     background-size: cover;
@@ -50,11 +50,12 @@ body {
     border-radius: 10px;
     background-color: rgba(73,94,167);
     transition: ease-in 0.2s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
 }
 
 .genericBtn:hover { 
-    background-color: rgba(0, 183, 255, 0.808);
     transition: ease-out 0.15s;
+    background-color: rgba(0, 183, 255, 0.808);
 }
 
 .form-control {

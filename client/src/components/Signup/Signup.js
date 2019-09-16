@@ -21,9 +21,10 @@ class Signup extends Component {
                             </Col>
                         </Row>
                     </Container>
+                    <br></br>
                     <Container className='B'>
                         <Row className='b'>
-                            <Col xs={8} md={5} lg={5}>
+                            <Col xs={9} md={5} lg={5}>
                                 <Form>
                                     <Form.Group controlId="formBasicEmail">
                                         {/* <Form.Label>Name</Form.Label> */}
@@ -61,6 +62,7 @@ class Signup extends Component {
                             </Col>
                         </Row>
                     </Container>
+                    <br></br>
                 </div> 
             </>
         )
