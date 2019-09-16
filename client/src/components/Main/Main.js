@@ -44,7 +44,7 @@ class Main extends Component {
                         </Row>
                     </Container>
                 </div> 
-                </>
+</> 
         )
     }
 }
