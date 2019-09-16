@@ -6,11 +6,23 @@
 body{
     background: red;
 }
-.a{
+.picCont{
     justify-content: center;
     margin-top: 70px;
     background: blue;
 }
+
+.label{
+    justify-content: center;
+    text-align: center;
+}
+
+.horoscope{
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+}
+
 .b{
     justify-content: center;
     font-size: 11vw;
