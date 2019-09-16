@@ -29,7 +29,3 @@ class Date extends React.Component {
 }
 
 export default Date;
-
-{/* <div>
-https://www.npmjs.com/package/react-datepicker
-</div> */}
