@@ -5,7 +5,7 @@ import Login from './components/Login/Login';
 import Signup from './components/Signup/Signup';
 import Profile from './components/Profile/Profile';
 import Matches from './components/Matches/Matches';
-
+import Chat from './components/Chat/Chat';
 
 
 
@@ -34,6 +34,7 @@ class App extends Component {
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/profile' component={Profile}/>
           <Route exact path='/matches' component={Matches}/>
+          <Route exact path='/chat' component={Chat} />
         </div>
       </BrowserRouter>
       </>
