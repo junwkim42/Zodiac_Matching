@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "name": "User1",
+        "gender": "Female",
+        "birthdate": "",
+        "age": "",
+        "profilePic": "https://data.whicdn.com/images/302058504/large.jpg?t=1511579073",
+        "zodiacSign": ""
+    },
+    {
+        "id": 2,
+        "name": "User2",
+        "gender": "Female",
+        "birthdate": "",
+        "age": "",
+        "profilePic": "https://www.best4geeks.com/wp-content/uploads/2018/08/30-broken-heart-girl-profile-picture-Copy.jpg",
+        "zodiacSign": ""
+    },
+    {
+        "id": 3,
+        "name": "User3",
+        "gender": "Female",
+        "birthdate": "",
+        "age": "",
+        "profilePic": "https://www.best4geeks.com/wp-content/uploads/2018/07/30-cute-girl-facebook-profile-picture-1.jpg",
+        "zodiacSign": ""
+    },
+    {
+        "id": 4,
+        "name": "User4",
+        "gender": "Male",
+        "birthdate": "",
+        "age": "",
+        "profilePic": "https://www.irreverentgent.com/wp-content/uploads/2018/03/Awesome-Profile-Pictures-for-Guys-look-away2.jpg",
+        "zodiacSign": ""
+    }
+]

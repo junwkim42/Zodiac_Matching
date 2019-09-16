@@ -1,0 +1,22 @@
+.card-img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+    border: solid;
+}
+
+.card-title {
+    margin: 0;
+    font-size: 90%;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.card-text {
+    margin: 0;
+    font-size: 75%;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.card-img-overlay {
+    padding: 3% 3%;
+}

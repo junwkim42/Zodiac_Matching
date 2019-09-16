@@ -9,7 +9,8 @@ const userSchema = new Schema({
   name: { type: String },
   interest: { type: String},
   location: {type: String},
-  gender: {type: String}
+  gender: {type: String},
+  image: {type: String}
 });
 
 const User = mongoose.model("User", userSchema);

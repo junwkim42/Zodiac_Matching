@@ -4,12 +4,44 @@
     max-width: none;
 }
 body{
-    background: red;
+    background: black;
 }
+<<<<<<< HEAD
 .picCont{
+=======
+/* rotating logo start */
+.imgLogo{
+    animation: spin infinite 250s linear;
+}
+@keyframes spin{
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+}
+/* rotating logo end */
+/* logo start */
+.logoCont{
+    position: relative;
+}
+.txtLogo{
+    position: absolute;
+    color: white;
+    bottom:0;
+    top: 50%; 
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size:60px;
+    height: 100px;
+    width:100%; 
+    text-align:center;
+}
+/* logo end */
+
+.a{
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
     justify-content: center;
     margin-top: 70px;
-    background: blue;
+    background: black;
+ 
 }
 
 .label{
@@ -28,12 +60,29 @@ body{
     font-size: 11vw;
     text-align: center;
     margin-top: 40px;
-    background: yellow;
+    background:black;
 }
 .c, .d{
     justify-content: center;
     text-align: center;
+    background: black;
 }
 .btn{
     margin:10px;
+    flex: 1 1 auto;
+    margin: 10px;
+    padding: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+   /* text-shadow: 0px 0px 10px rgba(0,0,0,0.2);*/
+    box-shadow: 0 0 20px rgb(3, 104, 255);
+    border-radius: 10px;
 }
+
+
+.g{
+      background: lightblue;
+    }

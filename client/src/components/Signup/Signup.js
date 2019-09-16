@@ -6,9 +6,49 @@ import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
 import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
+import axios from "axios";
 
 
 class Signup extends Component {
+    state = {
+        name: "",
+        username: "",
+        password: "",
+        birthDate: ""
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+
+    handleFileChange = (file) => {
+        this.setState({
+            file: file
+        });
+    }  
+
+    handleFormSubmit = event => {
+        //alert("hello!");
+        
+        event.preventDefault();
+        console.log(`staet:`, this.state);
+        console.log(this.state.password);
+        console.log(this.state.birthDate);
+        if (this.state.username && this.state.password && this.state.birthDate && this.state.gender && this.state.file) {
+          axios.post("/join", {
+            username: this.state.username,
+            password: this.state.password,
+            birthDate: this.state.birthDate,
+            gender: this.state.gender,
+            file: this.state.file           
+          })
+            .then(res => console.log(res))
+            .catch(err => console.log(err));
+        }
+      };
 
     render(){
         return(
@@ -26,20 +66,32 @@ class Signup extends Component {
                     <Container className='B'>
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
-                                <Form>
+                                <Form onSubmit={this.handleFormSubmit}>
                                 <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Name</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter Name" />
+                                        <Form.Control
+                                            value={this.state.name}
+                                            onChange={this.handleInputChange} 
+                                            name="name" 
+                                            placeholder="Enter Name" />
                                     </Form.Group>
 
                                     <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Username</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter Username" />
+                                        <Form.Control                                             
+                                            value={this.state.username}
+                                            onChange={this.handleInputChange} 
+                                            name="username" 
+                                            placeholder="Enter Username" />
                                     </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
+                                            <Form.Control                                           
+                                            value={this.state.password}
+                                            onChange={this.handleInputChange}
+                                            name="password"
+                                            placeholder="Password"  />
                                         </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
@@ -47,6 +99,7 @@ class Signup extends Component {
                                             <Form.Control type="password" placeholder="Confirm Password" />
                                         </Form.Group>
                                        
+<<<<<<< HEAD
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Birth-Date</Form.Label>
                                             <Container className='C'>
@@ -63,18 +116,63 @@ class Signup extends Component {
                                             <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
                                             <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
                                         </DropdownButton>
+=======
+                                        <Form.Group controlId="formBasicBirthDate">
+                                            <Form.Label>Birth Date</Form.Label>
+                                            <Form.Control                                           
+                                            value={this.state.birthDate}
+                                            onChange={this.handleInputChange}
+                                            name="birthDate"
+                                            placeholder="DD/MM/YYYY"  />
+                                        </Form.Group>
+                                    
+                                        <Form.Group controlId="formBasicGender">
+                                        <Form.Label>Gender</Form.Label>
+                                        <Form.Control 
+                                            value={this.state.gender}
+                                            onChange={this.handleInputChange}
+                                            name="gender"
+                                            as="select">
+                                            <option>Select gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                            <option>UnKnown</option>
+                                            
+                                        </Form.Control>
+                                        </Form.Group>
+
+                                        {/* <DropdownButton 
+                                            value={this.state.gender}
+                                            onChange={() => alert("hello")} id="dropdown-basic-button" title="Gender">
+                                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
+                                            <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
+                                        </DropdownButton> */}
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
 
                                         <Container className='D'>
                                             <Row className='d'>
                                                  <Col xs={6} md={6} lg={4}>
                                         <Form.Group controlId="formBasicPassword">
                                             {/* <Form.Label>Upload Image</Form.Label> */}
+<<<<<<< HEAD
                                             <Uploader/>
+=======
+
+
+                                            <Uploader handleFileChange = {this.handleFileChange} />
+
+
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
                                         </Form.Group>
                                                  </Col>
                                             </Row>
                                          </Container>
+<<<<<<< HEAD
                                         <Link to='/login'><Button variant="primary" type="submit">
+=======
+                                        <Button variant="primary" onClick={this.handleFormSubmit}>
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
                                             Signup
                                         </Button></Link>
 

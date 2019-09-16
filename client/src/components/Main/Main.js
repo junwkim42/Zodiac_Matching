@@ -10,9 +10,13 @@ class Main extends Component {
     
 
     render(){
+<<<<<<< HEAD
         return(
 <>
   
+=======
+        return(   
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
                 <div className='imgCont'>
  
                     <Container className='A'>
@@ -44,8 +48,11 @@ class Main extends Component {
                         </Row>
                     </Container>
                 </div> 
+<<<<<<< HEAD
          
             </>
+=======
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
         )
     }
 }
