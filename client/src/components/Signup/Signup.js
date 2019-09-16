@@ -51,39 +51,39 @@ class Signup extends Component {
 
     render(){
         return(
-            <>
-           
-                <div className='imgCont'>
-                    <Container className='A'>
-                        <Row className='a'>
-                            <Col xs={8} md={4} lg={3}>
+                <>
+
+                    <div className='imgCont'>
+                        <Container className='A'>
+                            <Row className='a'>
+                                <Col xs={8} md={4} lg={3}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
                                     <div className='txtLogo'>Zodiac</div>
-                            </Col>
-                        </Row>
-                    </Container>
+                                </Col>
+                            </Row>
+                        </Container>
                     <br></br>
-                    <Container className='B'>
-                        <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
-                                <Form onSubmit={this.handleFormSubmit}>
-                                <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Name</Form.Label>
-                                        <Form.Control
+                        <Container className='B'>
+                            <Row className='b'>
+                                <Col xs={6} md={8} lg={8}>
+                                    <Form onSubmit={this.handleFormSubmit}>
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Label>Name</Form.Label>
+                                            <Form.Control
                                             value={this.state.name}
                                             onChange={this.handleInputChange} 
                                             name="name" 
                                             placeholder="Enter Name" />
-                                    </Form.Group>
+                                        </Form.Group>
 
-                                    <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Username</Form.Label>
-                                        <Form.Control                                             
+                                        <Form.Group controlId="formBasicEmail">
+                                            <Form.Label>Username</Form.Label>
+                                            <Form.Control                                             
                                             value={this.state.username}
                                             onChange={this.handleInputChange} 
                                             name="username" 
                                             placeholder="Enter Username" />
-                                    </Form.Group>
+                                        </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Password</Form.Label>
@@ -98,28 +98,7 @@ class Signup extends Component {
                                             <Form.Label>Confirm Password</Form.Label>
                                             <Form.Control type="password" placeholder="Confirm Password" />
                                         </Form.Group>
-                                       
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Birth-Date</Form.Label>
-                                            <Container className='C'>
-                                            <Row className='c'>
-                                                 <Col xs={10} md={8} lg={5}>
-                                            <Date/>
-                                            </Col>
-                                            </Row>
-                                         </Container>
-                                        </Form.Group>
 
-                                        <DropdownButton id="dropdown-basic-button" title="Gender">
-                                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
-                                        </DropdownButton>
-=======
->>>>>>> junwon
                                         <Form.Group controlId="formBasicBirthDate">
                                             <Form.Label>Birth Date</Form.Label>
                                             <Form.Control                                           
@@ -128,10 +107,10 @@ class Signup extends Component {
                                             name="birthDate"
                                             placeholder="DD/MM/YYYY"  />
                                         </Form.Group>
-                                    
+
                                         <Form.Group controlId="formBasicGender">
-                                        <Form.Label>Gender</Form.Label>
-                                        <Form.Control 
+                                            <Form.Label>Gender</Form.Label>
+                                            <Form.Control 
                                             value={this.state.gender}
                                             onChange={this.handleInputChange}
                                             name="gender"
@@ -140,69 +119,48 @@ class Signup extends Component {
                                             <option>Male</option>
                                             <option>Female</option>
                                             <option>UnKnown</option>
-                                            
-                                        </Form.Control>
+
+                                            </Form.Control>
                                         </Form.Group>
 
                                         {/* <DropdownButton 
-                                            value={this.state.gender}
-                                            onChange={() => alert("hello")} id="dropdown-basic-button" title="Gender">
-                                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
+                                        value={this.state.gender}
+                                        onChange={() => alert("hello")} id="dropdown-basic-button" title="Gender">
+                                        <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
+                                        <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
                                         </DropdownButton> */}
-<<<<<<< HEAD
-=======
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
->>>>>>> junwon
 
-                                        <Container className='D'>
-                                            <Row className='d'>
-                                                 <Col xs={6} md={6} lg={4}>
+                            <Container className='D'>
+                                <Row className='d'>
+                                    <Col xs={6} md={6} lg={4}>
                                         <Form.Group controlId="formBasicPassword">
-                                            {/* <Form.Label>Upload Image</Form.Label> */}
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-                                            <Uploader/>
-=======
->>>>>>> junwon
+                                        {/* <Form.Label>Upload Image</Form.Label> */}
 
 
                                             <Uploader handleFileChange = {this.handleFileChange} />
 
 
-<<<<<<< HEAD
-=======
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
->>>>>>> junwon
                                         </Form.Group>
-                                                 </Col>
-                                            </Row>
-                                         </Container>
-<<<<<<< HEAD
+                                    </Col>
+                                </Row>
+                            </Container>
                                         <Button variant="primary" onClick={this.handleFormSubmit}>
-=======
-<<<<<<< HEAD
-                                        <Link to='/login'><Button variant="primary" type="submit">
-=======
-                                        <Button variant="primary" onClick={this.handleFormSubmit}>
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
->>>>>>> junwon
-                                            Signup
+                                        Signup
                                         </Button>
 
-                                    <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
+                                        <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
                                         CANCEL
-                                    </Button></Link>
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Container>
+                                        </Button>
+                                        </Link>
+                                    </Form>
+                                </Col>
+                            </Row>
+                        </Container>
+                        
                     <br></br>
-                </div> 
-       
-            </>
+                    </div> 
+                </>
         )
     }
 }

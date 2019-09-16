@@ -7,23 +7,13 @@ import { Link } from 'react-router-dom';
 
 class Main extends Component {
 
-<<<<<<< HEAD
-    render() {
-        return(
-<>
+
   
-=======
     
 
     render(){
-<<<<<<< HEAD
-        return(
-<>
-  
-=======
         return(   
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
->>>>>>> junwon
+<>
                 <div className='imgCont'>
  
                     <Container className='A'>
@@ -57,15 +47,7 @@ class Main extends Component {
                         </Row>
                     </Container>
                 </div> 
-<<<<<<< HEAD
 </> 
-=======
-<<<<<<< HEAD
-         
-            </>
-=======
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
->>>>>>> junwon
         )
     }
 }
