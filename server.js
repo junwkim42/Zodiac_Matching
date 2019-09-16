@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 require("dotenv").config();
 const express = require("express");
 
@@ -34,5 +33,3 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zodiac");
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
-=======
->>>>>>> junwon
