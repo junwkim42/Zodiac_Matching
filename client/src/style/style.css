@@ -1,8 +1,12 @@
 * {
-    margin:0px;
-    padding:0px;
+    margin: 0px;
+    padding: 0px;
     color: white;
-    /* max-width: none; */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    font-weight: 50px;
+    font-family: 'Work Sans', sans-serif;
 }
 
 body {
@@ -20,10 +24,8 @@ body {
 
 .b {
     justify-content: center;
-    font-size: 4vw;
     text-align: center;
-    margin-top: 20px;
-    /* background: yellow; */
+    /* margin-top: 20px; */
 }
 
 .c, .d {
@@ -39,26 +41,47 @@ body {
     font-size: 50%;
 } */
 
-.btn {
-    margin-bottom: 20px;
+.genericBtn {
+    margin-bottom: 28px;
     width: 100%;
-    background: none;
     font-size: 15px;
-    padding: 18px 0px;
-    border-radius: 0px;
-}   
-
-.C {
-    min-width: 50vw;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(73,94,167);
+    transition: ease-in 0.2s;
 }
 
-.imgCont {
-    justify-content: center;
-    margin-top: 70px;
+.genericBtn:hover { 
+    background-color: rgba(0, 183, 255, 0.808);
+    transition: ease-out 0.15s;
 }
 
 .form-control {
     text-align: center;
+}
+
+/* .formLabel {
+    font-size: 40%;
+} */
+
+.formInput {
+    background: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-width: 1.5px;
+    border-color: rgba(255,255,255,0.2);
+    transition: ease-in 0.2s;
+    font-style: italic;
+    font-size: 90%;
+    
+}
+
+.formInput:hover {
+    background-color: rgba(255,255,255,0.1);
+    transition: ease-out 0.15s;
+    color:white;
 }
 
 .label {
@@ -76,19 +99,116 @@ body {
 {
     justify-content: center;
     margin-top: 70px;
-    /* background: blue; */
 }
-
-/* input
-{
-    width: 60%;
-    text-align: center;
-} */
 
 .nonna
 {
     justify-content: center;
+    text-align: center;
 }
+
+/* ===========     animation   ============= */
+
+.A {
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s; /* Firefox */
+    -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+    -o-animation: fadein 1.5s; /* Opera */
+}
+
+.C, .b {
+    animation: fadeInUp 0.7s;
+    -moz-animation: fadeInUp 0.7s; /* Firefox */
+    -webkit-animation: fadeInUp 0.7s; /* Safari and Chrome */
+    -o-animation: fadeInUp 0.7s; /* Opera */
+}
+
+/* ==============      fadein      ============ */
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========      fadeInUp    ============ */
+
+@keyframes fadeInUp {
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-moz-keyframes fadeInUp { /* Firefox */
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes fadeInUp { /* Safari and Chrome */
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-o-keyframes fadeInUp { /* Opera */
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
 
 /* ======    cards    ========= */
 

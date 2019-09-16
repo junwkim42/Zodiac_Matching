@@ -49,7 +49,7 @@ class Profile extends Component {
                 <Container className='D'>
                     <Row className='d'>
                         <Col xs={12} md={4} lg={2}>
-                                <Link to='/matches'><Button variant="warning" size='lg'>Find Matches</Button></Link>
+                                <Link to='/matches'><Button size='lg' className='genericBtn'>Find Matches</Button></Link>
                         </Col>
                     </Row>
                 </Container>

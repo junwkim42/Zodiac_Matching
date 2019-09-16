@@ -10,39 +10,35 @@ class Login extends Component {
     render(){
         return(
             <>
-                <div className='imgCont'>
-                    <Container className='A'>
-                        <Row className='a'>
-                            <Col xs={8} md={4} lg={3}>
-                                    <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
-                            </Col>
-                        </Row>
-                    </Container>
-                    <Container className='B'>
-                        <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
-                                <Form>
-                                    <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Username</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter email" />
-                                    </Form.Group>
-
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
-                                        </Form.Group>
-                                        <Link to='/profile'><Button variant="primary" type="submit">
-                                            Login
-                                        </Button></Link>
-
-                                        <Link to='/'><Button variant="primary" type="submit">
-                                            Cancel
-                                        </Button></Link>
-                                </Form>
-                            </Col>
-                        </Row>
-                    </Container>
-                </div> 
+                <Container className='A'>
+                    <Row className='a'>
+                        <Col xs={8} md={4} lg={3}>
+                                <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
+                        </Col>
+                    </Row>
+                </Container>
+                <Container className='B'>
+                    <Row className='b'>
+                        <Col xs={8} md={5} lg={5}>
+                            <Form>
+                                <Form.Group className='formGroup' controlId="formBasicEmail">
+                                    {/* <Form.Label className='formLabel'>Username</Form.Label> */}
+                                    <Form.Control type="email" placeholder="name" className='formInput' />
+                                </Form.Group>
+                                <Form.Group className='formGroup' controlId="formBasicPassword">
+                                    {/* <Form.Label className='formLabel'>Password</Form.Label> */}
+                                    <Form.Control type="password" placeholder="password" className='formInput' />
+                                </Form.Group>
+                                <Link to='/profile'><Button type="submit" className='genericBtn'>
+                                    LOGIN
+                                </Button></Link>
+                                <Link to='/'><Button type="submit" className='genericBtn'>
+                                    CANCEL
+                                </Button></Link>
+                            </Form>
+                        </Col>
+                    </Row>
+                </Container>
             </>
         )
     }

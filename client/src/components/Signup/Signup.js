@@ -23,45 +23,40 @@ class Signup extends Component {
                     </Container>
                     <Container className='B'>
                         <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
+                            <Col xs={8} md={5} lg={5}>
                                 <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Name</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter Name" />
-                                    </Form.Group>
-
                                     <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Username</Form.Label>
-                                        <Form.Control type="email" placeholder="Enter Username" />
+                                        {/* <Form.Label>Name</Form.Label> */}
+                                        <Form.Control type="email" placeholder="name" className='formInput'/>
                                     </Form.Group>
 
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Password" />
-                                        </Form.Group>
+                                    <Form.Group controlId="formBasicPassword">
+                                        {/* <Form.Label>Password</Form.Label> */}
+                                        <Form.Control label="password" type="password" placeholder="password" className='formInput'/>
+                                    </Form.Group>
 
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Confirm Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Confirm Password" />
-                                        </Form.Group>
-                                       
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Birth-Date</Form.Label>
-                                            <Date/>
-                                        </Form.Group>
+                                    <Form.Group controlId="formBasicPassword">
+                                        {/* <Form.Label>Confirm Password</Form.Label> */}
+                                        <Form.Control type="password" placeholder="re-enter password" className='formInput'/>
+                                    </Form.Group>
+                                    
+                                    <Form.Group controlId="formBasicPassword">
+                                        {/* <Form.Label>Confirm Password</Form.Label> */}
+                                        <Form.Control type="date" placeholder="birthdate" className='formInput'/>
+                                    </Form.Group>
 
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Upload Image</Form.Label>
-                                            <ImageUploader/>
-                                        </Form.Group>
-                                        
-                                        <Link to='/profile'><Button variant="primary" type="submit">
-                                            Signup
-                                        </Button></Link>
+                                    <Form.Group controlId="formBasicPassword">
+                                        <Form.Label>upload your profile picture</Form.Label>
+                                        <ImageUploader/>
+                                    </Form.Group>
+                                    
+                                    <Link to='/profile'><Button type="submit" className='genericBtn'>
+                                        SIGNUP
+                                    </Button></Link>
 
-                                        <Link to='/'><Button variant="primary" type="submit">
-                                            Cancel
-                                        </Button></Link>
+                                    <Link to='/'><Button type="submit" className='genericBtn'>
+                                        CANCEL
+                                    </Button></Link>
                                 </Form>
                             </Col>
                         </Row>

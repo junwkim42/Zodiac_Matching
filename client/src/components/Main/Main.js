@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 class Main extends Component {
 
-    render(){
+    render() {
         return(
             <>
                 <div className='imgCont'>
@@ -29,13 +29,13 @@ class Main extends Component {
                     <br></br>
                     <Container className='C'>
                         <Row className='c'>
-                            <Col xs={7} md={5} lg={2}>
-                                    <Link to='/login'><Button size='lg'>LOGIN</Button></Link> 
+                            <Col xs={8} md={5} lg={3}>
+                                    <Link to='/login'><Button size='lg' className='genericBtn'>LOGIN</Button></Link> 
                             </Col>
                         </Row>
                         <Row className='d'>
-                            <Col xs={7} md={5} lg={2}>
-                                    <Link to='/signup'><Button size='lg'>SIGNUP</Button></Link>
+                            <Col xs={8} md={5} lg={3}>
+                                    <Link to='/signup'><Button size='lg' className='genericBtn'>SIGNUP</Button></Link>
                             </Col>
                         </Row>
                     </Container>
