@@ -41,21 +41,32 @@ class Signup extends Component {
                                         <Form.Control type="password" placeholder="re-enter password" className='formInput'/>
                                     </Form.Group>
                                     
-                                    <Form.Group controlId="formBasicPassword">
+                                    <Form.Group controlId="formBasicDate">
                                         {/* <Form.Label>Confirm Password</Form.Label> */}
                                         <Form.Control type="date" placeholder="birthdate" className='formInput'/>
                                     </Form.Group>
+
+                                    Select gender of your matches: <br/><br/>
+                                    <form>
+                                        <div class="radio-group">
+                                            <input type="radio" id="radio1" name="radio-category" checked/>
+                                            <label for="radio1">Male</label>
+                                            <br/>
+                                            <input type="radio" id="radio2" name="radio-category" />
+                                            <label for="radio2">Female</label>
+                                        </div>
+                                    </form>
 
                                     <Form.Group controlId="formBasicPassword">
                                         <Form.Label>upload your profile picture</Form.Label>
                                         <ImageUploader/>
                                     </Form.Group>
                                     
-                                    <Link to='/profile'><Button type="submit" className='genericBtn'>
+                                    <Link to='/profile'><Button type="submit" variant="info" className='genericBtn'>
                                         SIGNUP
                                     </Button></Link>
 
-                                    <Link to='/'><Button type="submit" className='genericBtn'>
+                                    <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
                                         CANCEL
                                     </Button></Link>
                                 </Form>

@@ -30,12 +30,12 @@ class Main extends Component {
                     <Container className='C'>
                         <Row className='c'>
                             <Col xs={9} md={5} lg={3}>
-                                    <Link to='/login'><Button size='lg' className='genericBtn'>LOGIN</Button></Link> 
+                                    <Link to='/login'><Button size='lg' variant="info" className='genericBtn'>LOGIN</Button></Link> 
                             </Col>
                         </Row>
                         <Row className='d'>
                             <Col xs={9} md={5} lg={3}>
-                                    <Link to='/signup'><Button size='lg' className='genericBtn'>SIGNUP</Button></Link>
+                                    <Link to='/signup'><Button size='lg' variant="info" className='genericBtn'>SIGNUP</Button></Link>
                             </Col>
                         </Row>
                     </Container>

@@ -30,10 +30,10 @@ class Login extends Component {
                                     {/* <Form.Label className='formLabel'>Password</Form.Label> */}
                                     <Form.Control type="password" placeholder="password" className='formInput' />
                                 </Form.Group>
-                                <Link to='/profile'><Button type="submit" className='genericBtn'>
+                                <Link to='/profile'><Button type="submit" variant="info" className='genericBtn'>
                                     LOGIN
                                 </Button></Link>
-                                <Link to='/'><Button type="submit" className='genericBtn'>
+                                <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
                                     CANCEL
                                 </Button></Link>
                             </Form>

@@ -41,6 +41,7 @@ body {
 }
 
 .genericBtn {
+    color: rgba(255,255,255,0.6);
     margin-bottom: 28px;
     width: 100%;
     font-size: 15px;
@@ -53,6 +54,7 @@ body {
 }
 
 .genericBtn:hover { 
+    color: white;
     transition: ease-out 0.15s;
     background-color: rgba(0, 183, 255, 0.808);
 }
@@ -116,7 +118,7 @@ body {
     -o-animation: fadein 1.5s; /* Opera */
 }
 
-.C, .b, .disclaimer {
+.C, .b, .disclaimer, .picCont, .wrapper, .label, .horoscope {
     animation: fadeInUp 0.7s;
     -moz-animation: fadeInUp 0.7s; /* Firefox */
     -webkit-animation: fadeInUp 0.7s; /* Safari and Chrome */
@@ -238,7 +240,12 @@ body {
 .card-body {
     height: 100%;
     width: 100%;
+    transition: ease-in 0.2s;
+}
 
+.card-body:hover {
+    background-color: rgba(0, 183, 255, 0.808);
+    transition: ease-out 0.7s;
 }
 
 .card-img-top {
