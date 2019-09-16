@@ -1,0 +1,264 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    font-weight: 50px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+body {
+    background-image: url(../images/under_the_stars_final_edited_2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.a
+{
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.b {
+    justify-content: center;
+    text-align: center;
+}
+
+.c, .d {
+    justify-content: center;
+    text-align: center;
+}
+
+.disclaimer {
+    justify-content: center;
+    text-align: center;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 1;
+    font-size: 60%;
+}
+
+.genericBtn {
+    margin-bottom: 28px;
+    width: 100%;
+    font-size: 15px;
+    padding: 10px 0px;
+    border: none;
+    border-radius: 10px;
+    background-color: rgba(73,94,167);
+    transition: ease-in 0.2s;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.1), 0 6px 20px 0 rgba(0,0,0,0.1);
+}
+
+.genericBtn:hover { 
+    transition: ease-out 0.15s;
+    background-color: rgba(0, 183, 255, 0.808);
+}
+
+.form-control {
+    text-align: center;
+}
+
+/* .formLabel {
+    font-size: 40%;
+} */
+
+.formInput {
+    background: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    border-width: 1.5px;
+    border-color: rgba(255,255,255,0.2);
+    transition: ease-in 0.2s;
+    font-style: italic;
+    font-size: 90%;
+    
+}
+
+.formInput:hover {
+    background-color: rgba(255,255,255,0.1);
+    transition: ease-out 0.15s;
+    color:white;
+}
+
+.label {
+    justify-content: center;
+    text-align: center;
+}
+
+.horoscope {
+    justify-content: center;
+    text-align: center;
+    font-style: italic;
+}
+
+.picCont
+{
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.nonna
+{
+    justify-content: center;
+    text-align: center;
+}
+
+/* ===========     animation   ============= */
+
+.A {
+    animation: fadein 1.5s;
+    -moz-animation: fadein 1.5s; /* Firefox */
+    -webkit-animation: fadein 1.5s; /* Safari and Chrome */
+    -o-animation: fadein 1.5s; /* Opera */
+}
+
+.C, .b, .disclaimer {
+    animation: fadeInUp 0.7s;
+    -moz-animation: fadeInUp 0.7s; /* Firefox */
+    -webkit-animation: fadeInUp 0.7s; /* Safari and Chrome */
+    -o-animation: fadeInUp 0.7s; /* Opera */
+}
+
+/* ==============      fadein      ============ */
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* ==========      fadeInUp    ============ */
+
+@keyframes fadeInUp {
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-moz-keyframes fadeInUp { /* Firefox */
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-webkit-keyframes fadeInUp { /* Safari and Chrome */
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity:1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+@-o-keyframes fadeInUp { /* Opera */
+    from {
+        opacity:0;
+        -webkit-transform: translate3d(0, 20%, 0);
+        transform: translate3d(0, 20%, 0);
+    }
+    to {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* ======    cards    ========= */
+
+.wrapper {
+    overflow: auto;
+    text-align: center;
+}
+
+.deck {
+    display: inline-flex;
+    flex-wrap: wrap;
+    margin: 4%;
+}
+
+.deck > div {
+    margin: 3.5%;
+    border-radius: 10px;
+    border: solid;
+    border-color:  rgba(37, 17, 17, 0.11);
+    border-width: 0.2px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    width: 210px;
+    height: 270px;
+    background-color: rgba(255,255,255,0.1);
+}
+
+.card-body {
+    height: 100%;
+    width: 100%;
+
+}
+
+.card-img-top {
+    height: 50%;
+    width: 90%;
+    border-radius: 50%;
+    border: solid;
+    border-color: rgba(0, 0, 0, 0.637);
+    border-width: 0.5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card-title {
+    margin-top: 20px;
+    font-size: 90%;
+    text-shadow: 1px 1px 3px #000000;
+}
+
+.card-text {
+    margin-top: 10;
+    font-size: 75%;
+    text-shadow: 1px 1px 3px #000000;
+}
