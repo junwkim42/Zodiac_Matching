@@ -3,7 +3,9 @@ import Zodiac from './assets/img/zodiac.png';
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
+import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router'
 import axios from "axios";
 
 
@@ -15,7 +17,8 @@ class Signup extends Component {
         password: "",
         passwordConfirm: "",
         birthDate: "",
-        gender: ""
+        gender: "",
+        file: null
     };
 
     handleInputChange = event => {
@@ -25,13 +28,16 @@ class Signup extends Component {
         });
       };
 
+    handleFileChange = (file) => {
+        // track the image file upload
+        this.setState({ file });
+    }  
+
     handleFormSubmit = event => {
+        // prevent default install, we will do it ourselves below
         event.preventDefault();
-        console.log(this.state.username);
-        console.log(this.state.password);
-        console.log(this.state.passwordConfirm);
-        console.log(this.state.birthDate);
-        console.log(this.state.gender);
+        // check the state info
+        console.log(`state:`, this.state);
         if (this.state.password !== this.state.passwordConfirm){
             alert("Password mismatch.");
         }
@@ -41,34 +47,35 @@ class Signup extends Component {
         else if (this.state.username && 
             this.state.password && 
             this.state.birthDate && 
-            this.state.gender) {
-          axios.post("/join", {
-            username: this.state.username,
-            password: this.state.password,
-            birthDate: this.state.birthDate,
-            gender: this.state.gender
-          })
-            .then(res => {
-            /*    
-                console.log(res);
-                console.log('==================')
-                console.log(res.data);
-                console.log('==================')
-                console.log(res.data.msg);
-            */
-                if(res.data.msg !== "success"){
-                    alert(res.data.msg);
-                }
-                else {
-                    alert("Thank you! You can now log in");
-                    this.props.history.push({ pathname: '/login' });
+            this.state.gender &&
+            this.state.name){
+            // appending all the fields to the form-data.
+            const formData = new FormData();
+            for( let n of ['file','name','username','password','birthDate','gender'] )
+                formData.append(n, this.state[n]);
+
+            axios.post("/join", formData, {
+                headers: {
+                    'content-type': 'multipart/form-data'
                 }
             })
-            .catch(err => console.log(err));
+            .then(res => {
+                console.log( ` creation done, data: `, res.data );
+                if( res.data.error ){
+                    alert( res.data.error );
+                } else if( res.data.url ){
+                    // join successful, show message then go to login page.
+                    console.log( ` redirecting to: ${res.data.url}`);
+                    window.location = res.data.url;
+            }})
+            .catch(err => {
+                alert( err ); });
         }
         else {
-            alert("Please finish the form to continue.")
+                alert("Please finish the form to continue.")
         }
+//---------------------------------
+
       };
 
     render(){
@@ -157,6 +164,11 @@ class Signup extends Component {
                                             </label>
                                         </div>
                                     </form>
+
+                                    <Form.Group controlId="formBasicPassword" id='picUpload'>
+                                        <Form.Label>upload your profile picture</Form.Label>
+                                        <Uploader handleFileChange={this.handleFileChange}/>
+                                    </Form.Group>
                                     
                                     <Button 
                                         type="submit" 

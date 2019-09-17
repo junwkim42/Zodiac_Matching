@@ -4,6 +4,7 @@ const session = require("express-session");
 const mongoose = require("mongoose");
 const passport = require('passport');
 const path = require('path');
+const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -11,11 +12,17 @@ const PORT = process.env.PORT || 3001;
 require('./config/passport')(passport);
 
 // Define middleware here
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+// app.use(express.json());
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+
 // Serve up static assets (usually on heroku)
 // if (process.env.NODE_ENV === "production") {}
-  app.use(express.static(path.join(__dirname, "client/build")));
+app.use(express.static(path.join(__dirname, "client/build")));
+
+
 
 
 app.use(session({
@@ -44,4 +51,5 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zodiac", { useN
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
+  console.log('Server is running on PORT', PORT);
 });
