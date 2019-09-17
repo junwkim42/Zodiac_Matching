@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.jpg';
+import Zodiac from './assets/img/zodiac.png';
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router'
 import axios from "axios";
 
+
+
 class Signup extends Component {
     state = {
         name: "",
@@ -15,7 +17,7 @@ class Signup extends Component {
         password: "",
         passwordConfirm: "",
         birthDate: "",
-        gender: "Male",
+        gender: "",
         file: null
     };
 
@@ -36,45 +38,42 @@ class Signup extends Component {
         event.preventDefault();
         // check the state info
         console.log(`state:`, this.state);
-        if( !(this.state.name && this.state.username && this.state.password && this.state.birthDate && this.state.gender && this.state.file) ){
-            console.log( `x Sorry unable to submit form, incomplete info 
-            name(${this.state.name})
-            username(${this.state.username})
-            password(${this.state.password})
-            birthDate(${this.state.birthDate})
-            gender(${this.state.gender})
-            file(${this.state.file})!`);
-            return;
+        if (this.state.password !== this.state.passwordConfirm){
+            alert("Password mismatch.");
         }
+        else if (this.state.password.length < 6){
+            alert("Password has to be at least 6 characters");
+        }
+        else if (this.state.username && 
+            this.state.password && 
+            this.state.birthDate && 
+            this.state.gender){
+            // appending all the fields to the form-data.
+            const formData = new FormData();
+            for( let n of ['file','name','username','password','birthDate','gender'] )
+                formData.append(n, this.state[n]);
 
-        // appending all the fields to the form-data.
-        const formData = new FormData();
-        for( let n of ['file','name','username','password','birthDate','gender'] )
-            formData.append(n, this.state[n]);
-
-        axios.post("/join", formData, {
-            headers: {
-            'content-type': 'multipart/form-data'
-            }
-        })            
-    //   axios.post("/join", {
-    //     username: this.state.username,
-    //     password: this.state.password,
-    //     birthDate: this.state.birthDate,
-    //     gender: this.state.gender,
-    //     file: this.state.file           
-    //   })
-        .then(res => {
-            console.log( ` creation done, data: `, res.data );
-            if( res.data.error ){
-                alert( res.data.error );
-            } else if( res.data.url ){
-                // join successful, show message then go to login page.
-                console.log( ` redirecting to: ${res.data.url}`);
-                window.location = res.data.url;
-            } })
-        .catch(err => {
-            alert( err ); });
+            axios.post("/join", formData, {
+                headers: {
+                    'content-type': 'multipart/form-data'
+                }
+            })
+            .then(res => {
+                console.log( ` creation done, data: `, res.data );
+                if( res.data.error ){
+                    alert( res.data.error );
+                } else if( res.data.url ){
+                    // join successful, show message then go to login page.
+                    console.log( ` redirecting to: ${res.data.url}`);
+                    window.location = res.data.url;
+            }})
+            .catch(err => {
+                alert( err ); });
+        }
+        else {
+                alert("Please finish the form to continue.")
+        }
+//---------------------------------
 
       };
 
@@ -128,12 +127,12 @@ class Signup extends Component {
                                             placeholder="Password"/>
                                     </Form.Group>
 
-                                    <Form.Group controlId="formBasicPassword">
+                                    <Form.Group controlId="formBasicPasswordConfirm">
                                         {/* <Form.Label>Confirm Password</Form.Label> */}
                                         <Form.Control 
                                             type="password"  
                                             className='formInput'
-                                            value={this.state.password}
+                                            value={this.state.passwordConfirm}
                                             onChange={this.handleInputChange}
                                             name="passwordConfirm"
                                             placeholder="Re-enter password"/>
@@ -147,17 +146,21 @@ class Signup extends Component {
                                             value={this.state.birthDate}
                                             onChange={this.handleInputChange}
                                             name="birthDate"
-                                            placeholder="DD/MM/YYYY" />
+                                            placeholder="DD-MM-YYYY" />
                                     </Form.Group>
 
-                                    Select gender of your matches: <br/><br/>
+                                    Select your gender: <br/><br/>
                                     <form className='radio-group'>
                                         <div class="radio-group">
-                                            <input type="radio" id="radio1" name="radio-category" value="male" checked/>
-                                            <label for="radio1">Male</label>
+                                            <label>
+                                            <input type="radio" name="gender" value="male" checked={this.state.gender === 'male'} onChange={this.handleInputChange}/>
+                                            Male
+                                            </label>
                                             <br/>
-                                            <input type="radio" id="radio2" name="radio-category" value="female" />
-                                            <label for="radio2">Female</label>
+                                            <label>
+                                            <input type="radio" name="gender" value="female" checked={this.state.gender === 'female'} onChange={this.handleInputChange} />
+                                            Female
+                                            </label>
                                         </div>
                                     </form>
 
