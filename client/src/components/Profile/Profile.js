@@ -13,12 +13,19 @@ class Profile extends Component {
         matches
       };
 
+    removeMatch = id => {
+    // Filter this.state.matches for matches with an id not equal to the id being removed
+    const matches = this.state.matches.filter(match => match.id !== id);
+    // Set this.state.matches equal to the new matches array
+    this.setState({ matches });
+    };
+
     render () {
         return(
             <div className='profCont'>
                 <Container>
                     <Row className='picCont'>
-                        <Col xs={9} md={5} lg={4}>
+                        <Col xs={9} md={5} lg={3}>
                                 <Image id='profPic' className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
                                 <img className='imgUnderlay' alt="image underlay" src={Underlay}/>
                         </Col>
@@ -60,15 +67,17 @@ class Profile extends Component {
                     <Col xs={12} md={12} lg={12}>
                             <Wrapper>
                                     {this.state.matches.map(match => (
-                                            <Link to='matches/:id'><UserCard
+                                            <UserCard
+                                            removeMatch={this.removeMatch}
                                             id={match.id}
                                             name={match.name}
                                             gender={match.gender}
                                             age={match.age}
                                             birthdate={match.birthdate}
                                             profilePic={match.profilePic}
+                                            zodiacPic={match.zodiacPic}
                                             zodiacSign={match.zodiacSign}
-                                            /></Link>
+                                            />
                                         ))
                                     }
                             </Wrapper>
