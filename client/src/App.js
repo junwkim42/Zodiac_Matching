@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter , Route } from 'react-router-dom';
 import Main from './components/Main/Main';
-import Login from './components/Login/Login';
+import Login from "./components/Login/Login";
 import Signup from './components/Signup/Signup';
 import Profile from './components/Profile/Profile';
 import Matches from './components/Matches/Matches';
@@ -19,12 +19,12 @@ class App extends Component {
     this.setState({
       startDate: date
     });
-  };
 
-  
+  };
 
 
   render(){
+    let props = this.state.startDate;
     return (
       <>
       <BrowserRouter>
@@ -33,10 +33,7 @@ class App extends Component {
           <Route exact path='/login' component={Login}/>
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/profile' component={Profile}/>
-          <Route exact path='/profile/matches/:id' component={Profile}/>
           <Route exact path='/matches' component={Matches}/>
-          <Route exact path='/matches/:id' component={Matches}/>
-          {/* <Route exact path='/matches/:id/chat' component={Chat}/> */}
         </div>
       </BrowserRouter>
       </>

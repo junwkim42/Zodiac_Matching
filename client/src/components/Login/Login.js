@@ -1,4 +1,5 @@
 import React , {Component} from 'react';
+import axios from "axios";
 import Zodiac from './assets/img/zodiac.png';
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
@@ -6,6 +7,40 @@ import { Link } from 'react-router-dom';
 
 
 class Login extends Component {
+    state = {
+        username: "",
+        password: ""
+    };
+
+    handleInputChange = event => {
+        const { name, value } = event.target;
+        this.setState({
+          [name]: value
+        });
+      };
+
+    handleFormSubmit = event => {
+        event.preventDefault();
+        if (this.state.username && this.state.password) {
+          axios.post("/login", {
+            username: this.state.username,
+            password: this.state.password
+          })
+            .then(res => {
+                var json = JSON.parse(res.config.data);
+                console.log(res);
+                console.log("=================================");
+                console.log(res.config.data);
+                console.log("=================================");
+                console.log(json.username);
+                localStorage.setItem("username", json.username);
+                this.props.history.push({
+                    pathname: '/profile',
+                    state: {username: json.username}});
+            })
+            .catch(err => console.log(err));
+        }
+      };
 
     render(){
         return(
@@ -24,15 +59,32 @@ class Login extends Component {
                             <Form>
                                 <Form.Group className='formGroup' controlId="formBasicEmail">
                                     {/* <Form.Label className='formLabel'>Username</Form.Label> */}
-                                    <Form.Control type="email" placeholder="name" className='formInput' />
+                                    <Form.Control 
+                                        type="email" 
+                                        className='formInput'
+                                        value={this.state.username}
+                                        onChange={this.handleInputChange} 
+                                        name="username" 
+                                        placeholder="Enter your email" />
                                 </Form.Group>
                                 <Form.Group className='formGroup' controlId="formBasicPassword">
                                     {/* <Form.Label className='formLabel'>Password</Form.Label> */}
-                                    <Form.Control type="password" placeholder="password" className='formInput' />
+                                    <Form.Control 
+                                        type="password"  
+                                        className='formInput'
+                                        value={this.state.password}
+                                        onChange={this.handleInputChange}
+                                        name="password"
+                                        placeholder="Password"  />
                                 </Form.Group>
-                                <Link to='/profile'><Button type="submit" variant="info" className='genericBtn'>
+                                <Button 
+                                    type="submit" 
+                                    variant="info" 
+                                    className='genericBtn'
+                                    disabled={!(this.state.username && this.state.password)}
+                                    onClick={this.handleFormSubmit}>
                                     LOGIN
-                                </Button></Link>
+                                </Button>
                                 <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
                                     CANCEL
                                 </Button></Link>

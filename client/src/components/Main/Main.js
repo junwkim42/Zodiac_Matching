@@ -11,10 +11,12 @@ class Main extends Component {
         return(
             <>
                 <div className='imgCont'>
+ 
                     <Container className='A'>
                         <Row className='a'>
-                            <Col xs={8} md={4} lg={3}>
+                            <Col xs={8} md={4} lg={4}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
+                                    <div className='txtLogo'>Zodiac</div>
                             </Col>
                         </Row>
                     </Container>

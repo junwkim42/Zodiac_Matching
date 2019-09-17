@@ -8,6 +8,14 @@ import matches from "../../matches.json";
 import Underlay from '../../images/trzcacak.rs-zodiac-wheel-png-1500895.png';
 
 class Profile extends Component {
+    componentWillMount(){
+        //console.log(this.props.location.state.username);
+        //check localStorage if there is a username
+        //if not this.props.hitory("/login")
+        if (!localStorage.getItem('username')){
+            this.props.history.push('/login');
+        }
+    }
 
     state = {
         matches
