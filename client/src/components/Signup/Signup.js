@@ -7,6 +7,7 @@ import Date from './Date';
 import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import ImageUploader from './Uploader'
 
 
 class Signup extends Component {
@@ -77,7 +78,7 @@ class Signup extends Component {
                                             value={this.state.username}
                                             onChange={this.handleInputChange} 
                                             name="username" 
-                                            placeholder="Enter your email" />/>
+                                            placeholder="Enter your email" />
                                     </Form.Group>
 
                                     <Form.Group controlId="formBasicPassword">

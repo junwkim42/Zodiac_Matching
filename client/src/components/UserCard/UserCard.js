@@ -1,11 +1,7 @@
 import React from "react";
-<<<<<<< HEAD
-import "./assets/style/styleUserCard.css";
-=======
 import '../../style/style.css';
 import Close from "../../images/minus-4-xxl.png"
 import { Link } from 'react-router-dom';
->>>>>>> origin/d
 
 function UserCard(props) {
   return (
