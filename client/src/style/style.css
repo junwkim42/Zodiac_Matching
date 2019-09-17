@@ -59,6 +59,12 @@ body {
     background-color: rgba(0, 183, 255, 0.808);
 }
 
+.genericBtn:disabled { 
+    color: white;
+    transition: ease-out 0.15s;
+    background-color: rgba(117, 117, 117, 0.801);
+}
+
 .form-control {
     text-align: center;
 }
@@ -68,7 +74,7 @@ body {
 } */
 
 .formInput {
-    background: none;
+    background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     margin-top: 20px;
     margin-bottom: 30px;
@@ -77,13 +83,41 @@ body {
     transition: ease-in 0.2s;
     font-style: italic;
     font-size: 90%;
-    
 }
 
 .formInput:hover {
     background-color: rgba(255,255,255,0.1);
     transition: ease-out 0.15s;
     color:white;
+}
+
+.radioLabel {
+    margin-bottom: 4%;
+}
+
+.uploadPreviewThumbnail {
+    border: 1px solid rgba(221, 221, 221, 0.616);
+    border-radius: 20px;
+    padding: 3.8px;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 10%;
+    margin-top: 14%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+}
+
+.picUploadForm {
+    background: rgba(0, 0, 0, 0.28);
+    border: rgba(126, 126, 126, 0.671);
+    border-width: 1.8px;
+    opacity: 0.7;
+    border-style:inset;
+    border-radius: 50px;
+    margin-top: 0.5%;
+    max-width: 100%;
+    box-shadow: 
+        inset -10px 11px 8px -10px rgba(0, 0, 0, 0.233),
+        inset 10px -11px 8px -10px rgba(0, 0, 0, 0.233); 
 }
 
 .label {
@@ -136,7 +170,7 @@ body {
 }
 
 .uploadPreviewThumbnail {
-    width: 90%;
+    width: 80%;
 }
 
 @keyframes glow {

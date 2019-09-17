@@ -87,7 +87,7 @@ class Signup extends Component {
                         <Row className='a'>
                             <Col xs={8} md={4} lg={3}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
-                                    <div className='txtLogo'>Zodiac</div>
+                                    {/* <div className='txtLogo'>Zodiac</div> */}
                             </Col>
                         </Row>
                     </Container>
@@ -97,8 +97,9 @@ class Signup extends Component {
                             <Col xs={9} md={5} lg={5}>
                                 <Form>
                                     <Form.Group controlId="formBasicName">
-                                        <Form.Label>Name</Form.Label>
+                                        {/* <Form.Label>Name</Form.Label> */}
                                         <Form.Control
+                                            className='formInput'
                                             value={this.state.name}
                                             onChange={this.handleInputChange} 
                                             name="name" 
@@ -149,24 +150,24 @@ class Signup extends Component {
                                             name="birthDate"
                                             placeholder="DD-MM-YYYY" />
                                     </Form.Group>
-
-                                    Select your gender: <br/><br/>
+                                    <br/>
+                                    
                                     <form className='radio-group'>
+                                        <div className='radioLabel'>Select your gender: <br/></div>
                                         <div class="radio-group">
                                             <label>
-                                            <input type="radio" name="gender" value="male" checked={this.state.gender === 'male'} onChange={this.handleInputChange}/>
-                                            Male
+                                            <input type="radio" name="gender" value="male" checked={this.state.gender === 'male'} onChange={this.handleInputChange}/> Male
                                             </label>
                                             <br/>
                                             <label>
-                                            <input type="radio" name="gender" value="female" checked={this.state.gender === 'female'} onChange={this.handleInputChange} />
-                                            Female
+                                            <input type="radio" name="gender" value="female" checked={this.state.gender === 'female'} onChange={this.handleInputChange} /> Female
                                             </label>
                                         </div>
                                     </form>
+                                    <br/>
 
                                     <Form.Group controlId="formBasicPassword" id='picUpload'>
-                                        <Form.Label>upload your profile picture</Form.Label>
+                                        <Form.Label className='radioLabel'>Upload your profile picture:</Form.Label>
                                         <Uploader handleFileChange={this.handleFileChange}/>
                                     </Form.Group>
                                     

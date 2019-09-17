@@ -45,10 +45,11 @@ class Uploader extends Component {
       return (
         <div>
           <form onSubmit={this._handleSubmit}>
-            <input type="file" name="image" onChange={this._handleImageChange} />
+            <input type="file" name="image" onChange={this._handleImageChange} className='picUploadForm'/>
             {/* <button type="submit" onClick={this._handleSubmit}>Upload Image</button> */}
           </form>
           {$imagePreview}
+          <br/>
         </div>
       )
     }
