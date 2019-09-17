@@ -34,10 +34,7 @@ class App extends Component {
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/profile' component={Profile}/>
           <Route exact path='/matches' component={Matches}/>
-<<<<<<< HEAD
-          <Route exact path='/chat' component={Chat} />
-=======
->>>>>>> junwon
+          <Route exact path='/chat' component={Chat}/>
         </div>
       </BrowserRouter>
       </>

@@ -65,45 +65,20 @@ class Signup extends Component {
                             </Row>
                         </Container>
                     <br></br>
-<<<<<<< HEAD
-                        <Container className='B'>
-                            <Row className='b'>
-                                <Col xs={6} md={8} lg={8}>
-                                    <Form onSubmit={this.handleFormSubmit}>
-                                        <Form.Group controlId="formBasicEmail">
-                                            <Form.Label>Name</Form.Label>
-                                            <Form.Control
-=======
+
                     <Container className='B'>
                         <Row className='b'>
-<<<<<<< HEAD
-                            <Col xs={6} md={8} lg={8}>
-                                <Form onSubmit={this.handleFormSubmit}>
-                                <Form.Group controlId="formBasicEmail">
-=======
                             <Col xs={9} md={5} lg={5}>
                                 <Form>
                                     <Form.Group controlId="formBasicName">
->>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
                                         <Form.Label>Name</Form.Label>
                                         <Form.Control
->>>>>>> junwon
                                             value={this.state.name}
                                             onChange={this.handleInputChange} 
                                             name="name" 
                                             placeholder="Enter Name" />
                                         </Form.Group>
 
-<<<<<<< HEAD
-                                        <Form.Group controlId="formBasicEmail">
-                                            <Form.Label>Username</Form.Label>
-                                            <Form.Control                                             
-                                            value={this.state.username}
-                                            onChange={this.handleInputChange} 
-                                            name="username" 
-                                            placeholder="Enter Username" />
-                                        </Form.Group>
-=======
                                     <Form.Group controlId="formBasicEmail">
                                         {/* <Form.Label>Name</Form.Label> */}
                                         <Form.Control 
@@ -114,7 +89,6 @@ class Signup extends Component {
                                             name="username" 
                                             placeholder="Enter your email" />
                                     </Form.Group>
->>>>>>> junwon
 
                                     <Form.Group controlId="formBasicPassword">
                                         {/* <Form.Label>Password</Form.Label> */}
@@ -128,7 +102,6 @@ class Signup extends Component {
                                             placeholder="Password"/>
                                     </Form.Group>
 
-<<<<<<< HEAD
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Confirm Password</Form.Label>
                                             <Form.Control type="password" placeholder="Confirm Password" />
@@ -143,20 +116,7 @@ class Signup extends Component {
                                             placeholder="DD/MM/YYYY"  />
                                         </Form.Group>
 
-                                        <Form.Group controlId="formBasicGender">
-                                            <Form.Label>Gender</Form.Label>
-                                            <Form.Control 
-                                            value={this.state.gender}
-                                            onChange={this.handleInputChange}
-                                            name="gender"
-                                            as="select">
-                                            <option>Select gender</option>
-                                            <option>Male</option>
-                                            <option>Female</option>
-                                            <option>UnKnown</option>
-
-                                            </Form.Control>
-                                        </Form.Group>
+                           
 
                                         {/* <DropdownButton 
                                         value={this.state.gender}
@@ -181,14 +141,8 @@ class Signup extends Component {
                                 </Row>
                             </Container>
                                         <Button variant="primary" onClick={this.handleFormSubmit}>
-<<<<<<< HEAD
-                                        Signup
-                                        </Button>
-=======
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
                                             Signup
-                                        </Button></Link>
-=======
+                                        </Button>
                                     <Form.Group controlId="formBasicPassword">
                                         {/* <Form.Label>Confirm Password</Form.Label> */}
                                         <Form.Control 
@@ -234,8 +188,6 @@ class Signup extends Component {
                                         onClick={this.handleFormSubmit}>
                                         SIGNUP
                                     </Button>
->>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
->>>>>>> junwon
 
                                         <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
                                         CANCEL

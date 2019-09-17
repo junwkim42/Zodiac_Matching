@@ -16,8 +16,10 @@
     "react-images-uploader": "^1.2.0-rc1",
     "react-progress-button": "^5.1.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "3.1.1",
-    "react-simple-chatbot": "^0.6.1"
+    "react-scripts": "^3.1.1",
+    "react-simple-chatbot": "^0.6.1",
+    "start": "^5.1.0",
+    "stream-chat": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",

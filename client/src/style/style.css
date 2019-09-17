@@ -323,7 +323,6 @@ body {
 .card-text {
     font-size: 65%;
     text-shadow: 1px 1px 3px #000000;
-<<<<<<< HEAD
 }
 
 /* ============== logo ==============*/
@@ -354,9 +353,7 @@ body {
     text-align:center;
 }
 /* logo end */
-=======
-    text-transform: uppercase;
-}
+
 
 .card-img-bottom {
     margin-top: -3%;
@@ -364,4 +361,29 @@ body {
     width: 46%;
     height: 35%;
 }
->>>>>>> junwon
+
+/* chat start */
+.chat
+{
+    justify-content: center;
+    margin-top: 50px;
+    text-align: right;
+}
+.type
+{
+    justify-content: center;
+    margin-top: 50px;
+    text-align: left;
+}
+.cda{
+    color: #000000;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 500px;
+}
+.cd{
+    color: #000000;
+    width: 100%;
+    border-radius: 5px;
+}
+/* chat end */

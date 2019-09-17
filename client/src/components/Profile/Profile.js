@@ -33,14 +33,9 @@ class Profile extends Component {
             <div className='profCont'>
                 <Container>
                     <Row className='picCont'>
-<<<<<<< HEAD
-                        <Col xs={8} md={4} lg={3}>
-                                <Image className='profile mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
-=======
                         <Col xs={9} md={5} lg={3}>
                                 <Image id='profPic' className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
                                 <img className='imgUnderlay' alt="image underlay" src={Underlay}/>
->>>>>>> junwon
                         </Col>
                     </Row>
                 </Container>

@@ -1,9 +1,5 @@
 import React , {Component} from 'react';
-<<<<<<< HEAD
 import Zodiac from './assets/img/zodiac.jpg';
-=======
-import Zodiac from './assets/img/zodiac.png';
->>>>>>> junwon
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -11,32 +7,12 @@ import { Link } from 'react-router-dom';
 
 class Main extends Component {
 
-<<<<<<< HEAD
 
-  
-    
 
-    render(){
-        return(   
-<>
-=======
-<<<<<<< HEAD
-    
-
-    render(){
-<<<<<<< HEAD
-        return(
-<>
-  
-=======
-        return(   
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
-=======
     render() {
         return(
             <>
->>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
->>>>>>> junwon
+
                 <div className='imgCont'>
  
                     <Container className='A'>
@@ -47,8 +23,6 @@ class Main extends Component {
                             </Col>
                         </Row>
                     </Container>
-<<<<<<< HEAD
-=======
                     {/* <Container className='B'>
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
@@ -56,7 +30,6 @@ class Main extends Component {
                             </Col>
                         </Row>
                     </Container> */}
->>>>>>> junwon
                     <br></br>
                     <br></br>
                     <Container className='C'>
@@ -80,19 +53,10 @@ class Main extends Component {
                         </Row>
                     </Container>
                 </div> 
-<<<<<<< HEAD
-</> 
-=======
-<<<<<<< HEAD
-<<<<<<< HEAD
+
          
             </>
-=======
->>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
-=======
-            </>
->>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
->>>>>>> junwon
+
         )
     }
 }
