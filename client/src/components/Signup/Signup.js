@@ -1,13 +1,11 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.jpg';
+import Zodiac from './assets/img/zodiac.png';
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
-import Date from './Date';
-import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import ImageUploader from './Uploader'
+
 
 
 class Signup extends Component {
@@ -16,7 +14,8 @@ class Signup extends Component {
         username: "",
         password: "",
         passwordConfirm: "",
-        birthDate: ""
+        birthDate: "",
+        gender: ""
     };
 
     handleInputChange = event => {
@@ -27,19 +26,48 @@ class Signup extends Component {
       };
 
     handleFormSubmit = event => {
-        alert("hello!");
         event.preventDefault();
         console.log(this.state.username);
         console.log(this.state.password);
+        console.log(this.state.passwordConfirm);
         console.log(this.state.birthDate);
-        if (this.state.username && this.state.password && this.state.birthDate) {
+        console.log(this.state.gender);
+        if (this.state.password !== this.state.passwordConfirm){
+            alert("Password mismatch.");
+        }
+        else if (this.state.password.length < 6){
+            alert("Password has to be at least 6 characters");
+        }
+        else if (this.state.username && 
+            this.state.password && 
+            this.state.birthDate && 
+            this.state.gender) {
           axios.post("/join", {
             username: this.state.username,
             password: this.state.password,
-            birthDate: this.state.birthDate
+            birthDate: this.state.birthDate,
+            gender: this.state.gender
           })
-            .then(res => console.log(res))
+            .then(res => {
+            /*    
+                console.log(res);
+                console.log('==================')
+                console.log(res.data);
+                console.log('==================')
+                console.log(res.data.msg);
+            */
+                if(res.data.msg !== "success"){
+                    alert(res.data.msg);
+                }
+                else {
+                    alert("Thank you! You can now log in");
+                    this.props.history.push({ pathname: '/login' });
+                }
+            })
             .catch(err => console.log(err));
+        }
+        else {
+            alert("Please finish the form to continue.")
         }
       };
 
@@ -93,12 +121,12 @@ class Signup extends Component {
                                             placeholder="Password"/>
                                     </Form.Group>
 
-                                    <Form.Group controlId="formBasicPassword">
+                                    <Form.Group controlId="formBasicPasswordConfirm">
                                         {/* <Form.Label>Confirm Password</Form.Label> */}
                                         <Form.Control 
                                             type="password"  
                                             className='formInput'
-                                            value={this.state.password}
+                                            value={this.state.passwordConfirm}
                                             onChange={this.handleInputChange}
                                             name="passwordConfirm"
                                             placeholder="Re-enter password"/>
@@ -112,24 +140,23 @@ class Signup extends Component {
                                             value={this.state.birthDate}
                                             onChange={this.handleInputChange}
                                             name="birthDate"
-                                            placeholder="DD/MM/YYYY" />
+                                            placeholder="DD-MM-YYYY" />
                                     </Form.Group>
 
-                                    Select gender of your matches: <br/><br/>
+                                    Select your gender: <br/><br/>
                                     <form className='radio-group'>
                                         <div class="radio-group">
-                                            <input type="radio" id="radio1" name="radio-category" value="male" checked/>
-                                            <label for="radio1">Male</label>
+                                            <label>
+                                            <input type="radio" name="gender" value="male" checked={this.state.gender === 'male'} onChange={this.handleInputChange}/>
+                                            Male
+                                            </label>
                                             <br/>
-                                            <input type="radio" id="radio2" name="radio-category" value="female" />
-                                            <label for="radio2">Female</label>
+                                            <label>
+                                            <input type="radio" name="gender" value="female" checked={this.state.gender === 'female'} onChange={this.handleInputChange} />
+                                            Female
+                                            </label>
                                         </div>
                                     </form>
-
-                                    <Form.Group controlId="formBasicPassword" id='picUpload'>
-                                        <Form.Label>upload your profile picture</Form.Label>
-                                        <ImageUploader/>
-                                    </Form.Group>
                                     
                                     <Button 
                                         type="submit" 
