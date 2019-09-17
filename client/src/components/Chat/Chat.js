@@ -3,7 +3,7 @@ import '../../style/style.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-class Profile extends Component {
+class Chat extends Component {
     render() {
         return (
             <div>
@@ -17,4 +17,4 @@ class Profile extends Component {
     }
 }
 
-export default Profile;
+export default Chat;

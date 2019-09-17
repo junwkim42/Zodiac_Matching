@@ -1,4 +1,5 @@
 var db = require("../models");
+const fs = require('fs');
 const passport = require('passport');
 
 
@@ -19,14 +20,13 @@ module.exports = router;
 
 module.exports = function(app) {
 
-    app.post("/join", upload.single('image'), async (req, res)=>{
-        console.log( JSON.stringify( req.body.file) );
-        const {username, password, birthDate, gender, file} = req.body;
-        console.log("api");
-        console.log(req.body);
+    app.post("/join", upload.single('file'), async (req, res)=>{
+        const {name, username, password, birthDate, gender, file} = req.body;
+        console.log(`[api::join] name:${name} username:${username} password:${password} birthDate:${birthDate} gender:${gender} file:${file}`, req.body);
+
         let errors = [];
 
-        if(!username || !password || !birthDate || !gender || !file){
+        if(!name || !username || !password || !birthDate || !gender ){
             errors.push({ msg: "Please fill in all fields"});
         }
 
@@ -37,7 +37,10 @@ module.exports = function(app) {
         
         // await picture upload to complete THEN 
         // post to database
-        const imagePath = __dirname+'/client/public/images';
+        const imagePath = __dirname+'/../client/public/images';
+        if (!fs.existsSync(imagePath)){
+            fs.mkdirSync(imagePath);
+        }
         const fileUpload = new Resize(imagePath);
         if (!req.file) {
             errors.push({ msg: "Please provide an image"});           
@@ -47,32 +50,43 @@ module.exports = function(app) {
         // post this with the other data to databse.
         console.log( `>>>>>> filename: ${filename}` );
         
-        if (errors.length > 0){
-            res.send(errors[0].msg)
-        } else {
+        if (!errors.length > 0){
+            console.log( `* no errors, proceeding to see if unique username` );
             db.User.findOne({ username: username})
             .then(user => {
-  
                 if(user){
+                    console.log( `x sorry user already exists, can't write a new user!` );
                     errors.push({ msg: "Username already registered"});
-                    res.send(errors[0].msg);
                 }
                 else{
-                    const newUser = new db.User({
+                    const userData = {
+                        name: name,
                         username: username,
                         password: password,
                         birthDate: birthDate,
                         gender: gender,
                         image: filename
-                    });
+                    };
+                    console.log( ` saving to mongo user:`, userData );
+                    const newUser = new db.User(userData);
                     newUser.save()
                     .then(user=>{
-                        res.send("/login");
+                        console.log( `user successfully created. now sending redirect request` );
+                        res.send({ alert: "Created ok", url: "/login" });
                     })
-                    .catch(err=>console.log(err));
+                    .catch(err=>{
+                        errors.push({ msg: err.getMessage() });
+                    });
                 }
             })
         }
+
+        // if errors output
+        if( errors.length>0 ){
+            console.log( `x sorry errors: ${errors[0].msg}` );
+            res.send({ error: errors[0].msg })
+        }
+
     });
 
     app.post('/login', (req, res, next) => {
@@ -81,4 +95,8 @@ module.exports = function(app) {
             failureMessage: '/login'
         })(req, res, next);
     });
+
+    app.get('/logout', (req, res) =>{
+        req.logout();
+    })
 }
