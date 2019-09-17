@@ -1,7 +1,7 @@
 import React , {Component} from 'react';
 import Zodiac from './assets/img/zodiac.jpg';
-import './assets/style/styleSignup.css';
-import { Button, Container, Row, Col, Image, Form, DropdownButton, Dropdown } from 'react-bootstrap';
+import '../../style/style.css';
+import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
 import Date from './Date';
 import Uploader from'./Uploader';
@@ -14,6 +14,7 @@ class Signup extends Component {
         name: "",
         username: "",
         password: "",
+        passwordConfirm: "",
         birthDate: ""
     };
 
@@ -54,9 +55,10 @@ class Signup extends Component {
                             </Col>
                         </Row>
                     </Container>
+                    <br></br>
                     <Container className='B'>
                         <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
+                            <Col xs={9} md={5} lg={5}>
                                 <Form>
                                 <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Name</Form.Label>
@@ -118,13 +120,92 @@ class Signup extends Component {
                                             Signup
                                         </Button>
 
-                                        <Link to='/'><Button variant="primary" type="submit">
-                                            Cancel
-                                        </Button></Link>
+                                    <Form.Group controlId="formBasicName">
+                                        <Form.Label>Name</Form.Label>
+                                        <Form.Control
+                                            value={this.state.name}
+                                            onChange={this.handleInputChange} 
+                                            name="name" 
+                                            placeholder="Enter Name" />
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicEmail">
+                                        {/* <Form.Label>Name</Form.Label> */}
+                                        <Form.Control 
+                                            type="email" 
+                                            className='formInput'
+                                            value={this.state.username}
+                                            onChange={this.handleInputChange} 
+                                            name="username" 
+                                            placeholder="Enter your email" />/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        {/* <Form.Label>Password</Form.Label> */}
+                                        <Form.Control 
+                                            label="password" 
+                                            type="password" 
+                                            className='formInput'
+                                            value={this.state.password}
+                                            onChange={this.handleInputChange}
+                                            name="password"
+                                            placeholder="Password"/>
+                                    </Form.Group>
+
+                                    <Form.Group controlId="formBasicPassword">
+                                        {/* <Form.Label>Confirm Password</Form.Label> */}
+                                        <Form.Control 
+                                            type="password"  
+                                            className='formInput'
+                                            value={this.state.password}
+                                            onChange={this.handleInputChange}
+                                            name="passwordConfirm"
+                                            placeholder="Re-enter password"/>
+                                    </Form.Group>
+                                    
+                                    <Form.Group controlId="formBasicDate">
+                                        <Form.Control
+                                            label="Birth Date" 
+                                            type="date"  
+                                            className='formInput'
+                                            value={this.state.birthDate}
+                                            onChange={this.handleInputChange}
+                                            name="birthDate"
+                                            placeholder="DD/MM/YYYY" />
+                                    </Form.Group>
+
+                                    Select gender of your matches: <br/><br/>
+                                    <form className='radio-group'>
+                                        <div class="radio-group">
+                                            <input type="radio" id="radio1" name="radio-category" value="male" checked/>
+                                            <label for="radio1">Male</label>
+                                            <br/>
+                                            <input type="radio" id="radio2" name="radio-category" value="female" />
+                                            <label for="radio2">Female</label>
+                                        </div>
+                                    </form>
+
+                                    <Form.Group controlId="formBasicPassword" id='picUpload'>
+                                        <Form.Label>upload your profile picture</Form.Label>
+                                        <ImageUploader/>
+                                    </Form.Group>
+                                    
+                                    <Button 
+                                        type="submit" 
+                                        variant="info" 
+                                        className='genericBtn'
+                                        onClick={this.handleFormSubmit}>
+                                        SIGNUP
+                                    </Button>
+
+                                    <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
+                                        CANCEL
+                                    </Button></Link>
                                 </Form>
                             </Col>
                         </Row>
                     </Container>
+                    <br></br>
                 </div> 
        
             </>
