@@ -26,7 +26,18 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
           })
-            .then(res => console.log(res))
+            .then(res => {
+                var json = JSON.parse(res.config.data);
+                console.log(res);
+                console.log("=================================");
+                console.log(res.config.data);
+                console.log("=================================");
+                console.log(json.username);
+                localStorage.setItem("username", json.username);
+                this.props.history.push({
+                    pathname: '/profile',
+                    state: {username: json.username}});
+            })
             .catch(err => console.log(err));
         }
       };
@@ -67,7 +78,7 @@ class Login extends Component {
                                     </Form.Group>
                                         <Button 
                                             variant="primary" 
-                                            disabled={!(this.state.author && this.state.title)}
+                                            disabled={!(this.state.username && this.state.password)}
                                             onClick={this.handleFormSubmit}
                                         >
                                             Login

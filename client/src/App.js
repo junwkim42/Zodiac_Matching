@@ -19,12 +19,12 @@ class App extends Component {
     this.setState({
       startDate: date
     });
-  };
 
-  
+  };
 
 
   render(){
+    let props = this.state.startDate;
     return (
       <>
       <BrowserRouter>

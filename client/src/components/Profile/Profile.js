@@ -4,6 +4,14 @@ import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 class Profile extends Component {
+    componentWillMount(){
+        //console.log(this.props.location.state.username);
+        //check localStorage if there is a username
+        //if not this.props.hitory("/login")
+        if (!localStorage.getItem('username')){
+            this.props.history.push('/login');
+        }
+    }
 
     render () {
         return(

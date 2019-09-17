@@ -46,4 +46,8 @@ module.exports = function(app) {
             failureMessage: '/login'
         })(req, res, next);
     });
+
+    app.get('/logout', (req, res) =>{
+        req.logout();
+    })
 }

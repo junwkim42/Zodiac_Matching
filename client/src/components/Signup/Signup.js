@@ -100,9 +100,8 @@ class Signup extends Component {
                                         </Form.Group>
 
                                         <DropdownButton id="dropdown-basic-button" title="Gender">
-                                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
-                                            <Dropdown.Item href="#/action-3">Unknow</Dropdown.Item>
+                                            <Dropdown.Item value="male">Male</Dropdown.Item>
+                                            <Dropdown.Item value="female">Female</Dropdown.Item>
                                         </DropdownButton>
 
                                         <Container className='D'>
