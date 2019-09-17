@@ -119,6 +119,11 @@ body {
     opacity: 0.3;
 }
 
+.picCont {
+    text-align: center; 
+    justify-content: center;
+}
+
 #profPic {
     position: absolute;
     z-index: 2;
@@ -139,15 +144,10 @@ body {
     }
   }
 
-.picCont {
-    text-align: center; 
-    justify-content: center;
-}
-
 
 /* ===========     animation   ============= */
 
-.A, #profPic, .imgLogo {
+.A, .imgLogo, .picCont {
     animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; /* Firefox */
     -webkit-animation: fadein 1.5s; /* Safari and Chrome */
