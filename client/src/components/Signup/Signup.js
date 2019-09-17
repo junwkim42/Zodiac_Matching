@@ -60,66 +60,6 @@ class Signup extends Component {
                         <Row className='b'>
                             <Col xs={9} md={5} lg={5}>
                                 <Form>
-                                <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Name</Form.Label>
-                                        <Form.Control
-                                            value={this.state.name}
-                                            onChange={this.handleInputChange} 
-                                            name="name" 
-                                            placeholder="Enter Name" />
-                                    </Form.Group>
-
-                                    <Form.Group controlId="formBasicEmail">
-                                        <Form.Label>Username</Form.Label>
-                                        <Form.Control                                             
-                                            value={this.state.username}
-                                            onChange={this.handleInputChange} 
-                                            name="username" 
-                                            placeholder="Enter Username" />
-                                    </Form.Group>
-
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Password</Form.Label>
-                                            <Form.Control                                           
-                                            value={this.state.password}
-                                            onChange={this.handleInputChange}
-                                            name="password"
-                                            placeholder="Password"  />
-                                        </Form.Group>
-
-                                        <Form.Group controlId="formBasicPassword">
-                                            <Form.Label>Confirm Password</Form.Label>
-                                            <Form.Control type="password" placeholder="Confirm Password" />
-                                        </Form.Group>
-                                       
-                                        <Form.Group controlId="formBasicBirthDate">
-                                            <Form.Label>Birth Date</Form.Label>
-                                            <Form.Control                                           
-                                            value={this.state.birthDate}
-                                            onChange={this.handleInputChange}
-                                            name="birthDate"
-                                            placeholder="DD/MM/YYYY"  />
-                                        </Form.Group>
-
-                                        <DropdownButton id="dropdown-basic-button" title="Gender">
-                                            <Dropdown.Item value="male">Male</Dropdown.Item>
-                                            <Dropdown.Item value="female">Female</Dropdown.Item>
-                                        </DropdownButton>
-
-                                        <Container className='D'>
-                                            <Row className='d'>
-                                                 <Col xs={6} md={6} lg={4}>
-                                        <Form.Group controlId="formBasicPassword">
-                                            {/* <Form.Label>Upload Image</Form.Label> */}
-                                            <Uploader/>
-                                        </Form.Group>
-                                                 </Col>
-                                            </Row>
-                                         </Container>
-                                        <Button variant="primary" onClick={this.handleFormSubmit}>
-                                            Signup
-                                        </Button>
-
                                     <Form.Group controlId="formBasicName">
                                         <Form.Label>Name</Form.Label>
                                         <Form.Control
