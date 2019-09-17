@@ -63,6 +63,7 @@ class Signup extends Component {
                             </Col>
                         </Row>
                     </Container>
+                    <br></br>
                     <Container className='B'>
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
@@ -138,7 +139,7 @@ class Signup extends Component {
                                             {/* <Form.Label>Upload Image</Form.Label> */}
 
 
-                                        <Uploader handleFileChange = {this.handleFileChange} />
+                                            <Uploader handleFileChange = {this.handleFileChange} />
 
 
                                         </Form.Group>
@@ -149,13 +150,14 @@ class Signup extends Component {
                                             Signup
                                         </Button>
 
-                                        <Link to='/'><Button variant="primary" type="submit">
-                                            Cancel
-                                        </Button></Link>
+                                    <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
+                                        CANCEL
+                                    </Button></Link>
                                 </Form>
                             </Col>
                         </Row>
                     </Container>
+                    <br></br>
                 </div> 
        
             </>

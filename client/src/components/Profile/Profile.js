@@ -1,9 +1,5 @@
 import React , {Component} from 'react';
-<<<<<<< HEAD
 import './assets/style/styleProfile.css';
-=======
-import '../../style/style.css';
->>>>>>> origin/d
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";

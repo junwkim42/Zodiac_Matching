@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
 import "./assets/style/styleUserCard.css";
-=======
-import '../../style/style.css';
->>>>>>> origin/d
 
 function UserCard(props) {
   return (

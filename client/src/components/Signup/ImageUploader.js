@@ -7,7 +7,7 @@ class Uploader extends Component {
   render() {
     return (
       <div>
-        <ImageUploader multi={false} baseURL={'http://localhost:3000'} />
+        <ImageUploader multi={false} baseURL={'http://localhost:3001'} />
       </div>
     );
   }
