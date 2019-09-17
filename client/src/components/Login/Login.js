@@ -67,13 +67,14 @@ class Login extends Component {
                                             placeholder="Password" 
                                         />
                                     </Form.Group>
-                                        <Button 
+                                        <Link to='/profile'><Button 
                                             variant="primary" 
-                                            disabled={!(this.state.author && this.state.title)}
+                                            // disabled={!(this.state.author && this.state.title)}
                                             onClick={this.handleFormSubmit}
                                         >
                                             Login
                                         </Button>
+                                        </Link>
 
                                         <Link to='/'><Button variant="primary" type="submit">
                                             Cancel

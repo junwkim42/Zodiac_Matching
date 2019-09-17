@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
-
+import Chat from "../../components/Chat/Chat";
 
 
 class Matches extends Component {
@@ -64,7 +64,7 @@ class Matches extends Component {
                         <Col xs={12} md={12} lg={12}>
                             <Wrapper>
                                     {this.state.matches.map(match => (
-                                            <Link to='matches/:id'><UserCard
+                                            <Link to={Chat}><UserCard
                                             id={match.id}
                                             name={match.name}
                                             gender={match.gender}
