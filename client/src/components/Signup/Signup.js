@@ -1,5 +1,5 @@
 import React , {Component} from 'react';
-import zodiac from './assets/img/zodiac.jpg';
+import zodiac from './assets/img/zodiac.png';
 import './assets/style/styleSignup.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
@@ -27,15 +27,15 @@ class Signup extends Component {
                         <Row className='b'>
                             <Col xs={6} md={8} lg={8}>
                                 <Form>
-                                <Form.Group controlId="formBasicEmail">
+                                        <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Name</Form.Label>
                                         <Form.Control type="email" placeholder="Enter Name" />
-                                    </Form.Group>
+                                        </Form.Group>
 
-                                    <Form.Group controlId="formBasicEmail">
+                                        <Form.Group controlId="formBasicEmail">
                                         <Form.Label>Username</Form.Label>
                                         <Form.Control type="email" placeholder="Enter Username" />
-                                    </Form.Group>
+                                        </Form.Group>
 
                                         <Form.Group controlId="formBasicPassword">
                                             <Form.Label>Password</Form.Label>

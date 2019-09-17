@@ -1,17 +1,26 @@
 import React , {Component} from 'react';
-import Zodiac from './assets/img/zodiac.jpg';
+import Zodiac from './assets/img/zodiac.png';
 import './assets/style/style.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import CHEESE from './assets/img/couple.jpeg';
 
 
 class Main extends Component {
 
+    divStyle = {
+        backgroundImage: 'url(' + CHEESE + ')'
+    };
+
     render(){
         return(
+
+     
 <>
   
-                <div className='imgCont'>
+                <div className='imgCont' style={this.divStyle}>
+
+
 
                     <div className="infoDiv">
  
@@ -19,7 +28,7 @@ class Main extends Component {
                         <Row className='a'>
                             <Col xs={8} md={4} lg={4}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
-                                    <div className='txtLogo'>Zodiac</div>
+                                    {/* <div className='txtLogo'>Zodiac</div> */}
                             </Col>
                         </Row>
                     </Container>
