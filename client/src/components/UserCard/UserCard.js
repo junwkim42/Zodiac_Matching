@@ -8,11 +8,12 @@ function UserCard(props) {
     <span>
         <div className="deck">
             <div className="card-body">
-                <img onClick={() => props.removeMatch(props.id)} className='removeMatch' src={Close}/>
+                <img className='removeMatch' onClick={() => props.removeMatch(props.id)} src={Close} />
               <Link to='matches/:id'>
                 <img className="card-img-top" src={props.profilePic} alt={props.name}/>
                 <h5 className="card-title">{props.name}, {props.age}</h5>
                 <p className="card-text">{props.zodiacSign}</p>
+                <img className="card-img-bottom" src={props.zodiacPic} alt={props.zodiacSign}/>
               </Link>
             </div>  
         </div>

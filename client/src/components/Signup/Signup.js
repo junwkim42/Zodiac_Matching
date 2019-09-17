@@ -47,7 +47,7 @@ class Signup extends Component {
                                     </Form.Group>
 
                                     Select gender of your matches: <br/><br/>
-                                    <form>
+                                    <form className='radio-group'>
                                         <div class="radio-group">
                                             <input type="radio" id="radio1" name="radio-category" checked/>
                                             <label for="radio1">Male</label>
@@ -57,7 +57,7 @@ class Signup extends Component {
                                         </div>
                                     </form>
 
-                                    <Form.Group controlId="formBasicPassword">
+                                    <Form.Group controlId="formBasicPassword" id='picUpload'>
                                         <Form.Label>upload your profile picture</Form.Label>
                                         <ImageUploader/>
                                     </Form.Group>

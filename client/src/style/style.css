@@ -147,14 +147,14 @@ body {
 
 /* ===========     animation   ============= */
 
-.A {
+.A, #profPic, .imgLogo {
     animation: fadein 1.5s;
     -moz-animation: fadein 1.5s; /* Firefox */
     -webkit-animation: fadein 1.5s; /* Safari and Chrome */
     -o-animation: fadein 1.5s; /* Opera */
 }
 
-.C, .b, .disclaimer, .picCont, .wrapper, .label, .horoscope {
+.C, .genericBtn, .formGroup, .disclaimer, .wrapper, .label, .horoscope, .radio-group, #picUpload, .formInput, .card-body {
     animation: fadeInUp 0.7s;
     -moz-animation: fadeInUp 0.7s; /* Firefox */
     -webkit-animation: fadeInUp 0.7s; /* Safari and Chrome */
@@ -305,7 +305,7 @@ body {
 .card-img-top {
     margin-top: -3%;
     height: 40%;
-    width: 80%;
+    width: 75%;
     border-radius: 50%;
     border: solid;
     border-color: rgba(0, 0, 0, 0.637);
@@ -314,13 +314,21 @@ body {
 }
 
 .card-title {
-    margin-top: 20px;
+    margin-top: 6%;
+    margin-bottom: 0px;
     font-size: 90%;
     text-shadow: 1px 1px 3px #000000;
 }
 
 .card-text {
-    margin-top: 10;
-    font-size: 75%;
+    font-size: 65%;
     text-shadow: 1px 1px 3px #000000;
+    text-transform: uppercase;
+}
+
+.card-img-bottom {
+    margin-top: -3%;
+    padding-bottom: 3%;
+    width: 46%;
+    height: 35%;
 }
