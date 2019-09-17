@@ -89,6 +89,7 @@ body {
 .label {
     justify-content: center;
     text-align: center;
+    margin-top: 1.5%;
 }
 
 .horoscope {
@@ -108,6 +109,40 @@ body {
     justify-content: center;
     text-align: center;
 }
+
+
+/* ==========      profile picture      ======== */
+.imgUnderlay {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+}
+
+#profPic {
+    position: absolute;
+    z-index: 2;
+    width: 66%;
+    top: 13.5%;
+    left: 17%;
+    -webkit-animation: glow 5s ease-in-out infinite alternate;
+    -moz-animation: glow 5s ease-in-out infinite alternate;
+    animation: glow 5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+      box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px rgb(0, 134, 139), 0 0 40px rgb(0, 134, 139), 0 0 50px rgb(0, 134, 139), 0 0 60px rgb(0, 134, 139), 0 0 70px rgb(0, 134, 139);
+    }
+    to {
+      box-shadow: 0 0 20px #fff, 0 0 30pxrgb(0, 217, 255), 0 0 40pxrgb(0, 217, 255), 0 0 50pxrgb(0, 217, 255), 0 0 60pxrgb(0, 217, 255), 0 0 70pxrgb(0, 217, 255), 0 0 80pxrgb(0, 217, 255);
+    }
+  }
+
+.picCont {
+    text-align: center; 
+    justify-content: center;
+}
+
 
 /* ===========     animation   ============= */
 
@@ -211,7 +246,6 @@ body {
     }
 }
 
-
 /* ======    cards    ========= */
 
 .wrapper {
@@ -232,8 +266,8 @@ body {
     border-color:  rgba(37, 17, 17, 0.11);
     border-width: 0.2px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-    width: 210px;
-    height: 270px;
+    width: 225px;
+    height: 280px;
     background-color: rgba(255,255,255,0.1);
 }
 

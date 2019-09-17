@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
+import Underlay from '../../images/trzcacak.rs-zodiac-wheel-png-1500895.png';
 
 class Profile extends Component {
 
@@ -17,8 +18,9 @@ class Profile extends Component {
             <div className='profCont'>
                 <Container>
                     <Row className='picCont'>
-                        <Col xs={8} md={4} lg={3}>
-                                <Image className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
+                        <Col xs={9} md={5} lg={4}>
+                                <Image id='profPic' className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
+                                <img className='imgUnderlay' alt="image underlay" src={Underlay}/>
                         </Col>
                     </Row>
                 </Container>
