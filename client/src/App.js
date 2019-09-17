@@ -19,12 +19,12 @@ class App extends Component {
     this.setState({
       startDate: date
     });
-  };
 
-  
+  };
 
 
   render(){
+    let props = this.state.startDate;
     return (
       <>
       <BrowserRouter>
@@ -33,9 +33,11 @@ class App extends Component {
           <Route exact path='/login' component={Login}/>
           <Route exact path='/signup' component={Signup}/>
           <Route exact path='/profile' component={Profile}/>
-          <Route exact path='/profile/matches/:id' component={Profile}/>
           <Route exact path='/matches' component={Matches}/>
+<<<<<<< HEAD
           <Route exact path='/chat' component={Chat} />
+=======
+>>>>>>> junwon
         </div>
       </BrowserRouter>
       </>

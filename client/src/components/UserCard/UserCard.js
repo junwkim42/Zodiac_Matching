@@ -1,14 +1,23 @@
 import React from "react";
 import '../../style/style.css';
+<<<<<<< HEAD
+=======
+import Close from "../../images/minus-4-xxl.png"
+import { Link } from 'react-router-dom';
+>>>>>>> junwon
 
 function UserCard(props) {
   return (
     <span>
         <div className="deck">
             <div className="card-body">
-            <img className="card-img-top" src={props.profilePic} alt={props.name}/>
+                <img className='removeMatch' onClick={() => props.removeMatch(props.id)} src={Close} />
+              <Link to='matches/:id'>
+                <img className="card-img-top" src={props.profilePic} alt={props.name}/>
                 <h5 className="card-title">{props.name}, {props.age}</h5>
                 <p className="card-text">{props.zodiacSign}</p>
+                <img className="card-img-bottom" src={props.zodiacPic} alt={props.zodiacSign}/>
+              </Link>
             </div>  
         </div>
     </span>

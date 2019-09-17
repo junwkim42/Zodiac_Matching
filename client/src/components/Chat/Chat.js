@@ -3,8 +3,11 @@ import '../../style/style.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> junwon
 class Chat extends Component {
     render() {
         return (
@@ -29,6 +32,9 @@ class Chat extends Component {
     }
 }
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> junwon
 export default Chat;

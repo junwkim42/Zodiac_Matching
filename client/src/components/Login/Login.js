@@ -1,9 +1,21 @@
 import React , {Component} from 'react';
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> junwon
 import Zodiac from './assets/img/zodiac.jpg';
 import '../../style/style.css';
 import API from '../utils/API'
 import './assets/style/styleLogin.css';
+=======
+>>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
 import axios from "axios";
+<<<<<<< HEAD
+=======
+import Zodiac from './assets/img/zodiac.png';
+import '../../style/style.css';
+>>>>>>> junwon
 import { Button, Container, Row, Col, Image, Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
@@ -28,7 +40,30 @@ class Login extends Component {
             username: this.state.username,
             password: this.state.password
           })
+<<<<<<< HEAD
             .then(res => console.log(res))
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+            // .then(res => )
+=======
+            .then(res => console.log(res))
+>>>>>>> 767cb87ae4a936a687c3edf62839864a67f7ce1f
+=======
+            .then(res => {
+                var json = JSON.parse(res.config.data);
+                console.log(res);
+                console.log("=================================");
+                console.log(res.config.data);
+                console.log("=================================");
+                console.log(json.username);
+                localStorage.setItem("username", json.username);
+                this.props.history.push({
+                    pathname: '/profile',
+                    state: {username: json.username}});
+            })
+>>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
+>>>>>>> junwon
             .catch(err => console.log(err));
         }
       };
@@ -36,6 +71,10 @@ class Login extends Component {
     render(){
         return(
             <>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> junwon
                 <div className='imgCont'>
                     <Container className='A'>
                         <Row className='a'>
@@ -85,6 +124,58 @@ class Login extends Component {
                     </Container>
                 </div> 
             
+<<<<<<< HEAD
+=======
+=======
+                <Container className='A'>
+                    <Row className='a'>
+                        <Col xs={8} md={4} lg={3}>
+                                <Image className='imgLogo mx-auto d-block' alt='alignment' src={Zodiac} roundedCircle fluid/>
+                        </Col>
+                    </Row>
+                </Container>
+                <br></br>
+                <Container className='B'>
+                    <Row className='b'>
+                        <Col xs={9} md={5} lg={5}>
+                            <Form>
+                                <Form.Group className='formGroup' controlId="formBasicEmail">
+                                    {/* <Form.Label className='formLabel'>Username</Form.Label> */}
+                                    <Form.Control 
+                                        type="email" 
+                                        className='formInput'
+                                        value={this.state.username}
+                                        onChange={this.handleInputChange} 
+                                        name="username" 
+                                        placeholder="Enter your email" />
+                                </Form.Group>
+                                <Form.Group className='formGroup' controlId="formBasicPassword">
+                                    {/* <Form.Label className='formLabel'>Password</Form.Label> */}
+                                    <Form.Control 
+                                        type="password"  
+                                        className='formInput'
+                                        value={this.state.password}
+                                        onChange={this.handleInputChange}
+                                        name="password"
+                                        placeholder="Password"  />
+                                </Form.Group>
+                                <Button 
+                                    type="submit" 
+                                    variant="info" 
+                                    className='genericBtn'
+                                    disabled={!(this.state.username && this.state.password)}
+                                    onClick={this.handleFormSubmit}>
+                                    LOGIN
+                                </Button>
+                                <Link to='/'><Button type="submit" variant="info" className='genericBtn'>
+                                    CANCEL
+                                </Button></Link>
+                            </Form>
+                        </Col>
+                    </Row>
+                </Container>
+>>>>>>> ef013ba55bcbc15c75845dc1ede3ed20f3cd1ee4
+>>>>>>> junwon
             </>
         )
     }
