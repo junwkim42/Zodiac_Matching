@@ -43,6 +43,7 @@ class Signup extends Component {
             this.state.birthDate && 
             this.state.gender) {
           axios.post("/join", {
+            name: this.state.name,
             username: this.state.username,
             password: this.state.password,
             birthDate: this.state.birthDate,
