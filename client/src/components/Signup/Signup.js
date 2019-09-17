@@ -3,20 +3,18 @@ import Zodiac from './assets/img/zodiac.jpg';
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image, Form} from 'react-bootstrap';
 import "react-datepicker/dist/react-datepicker.css";
-import Date from './Date';
 import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router'
 import axios from "axios";
-import ImageUploader from './Uploader'
 
 class Signup extends Component {
     state = {
-        name: `user${Math.random()}`,
-        username: `user${Math.random()}`,
-        password: "testtest",
-        passwordConfirm: "testtest",
-        birthDate: "04/04/1980",
+        name: "",
+        username: "",
+        password: "",
+        passwordConfirm: "",
+        birthDate: "",
         gender: "Male",
         file: null
     };
@@ -49,13 +47,10 @@ class Signup extends Component {
             return;
         }
 
+        // appending all the fields to the form-data.
         const formData = new FormData();
-        formData.append('file', this.state.file);
-        formData.append('name', this.state.name);
-        formData.append('username', this.state.username);
-        formData.append('password', this.state.password);
-        formData.append('birthDate', this.state.birthDate);
-        formData.append('gender', this.state.gender);
+        for( let n of ['file','name','username','password','birthDate','gender'] )
+            formData.append(n, this.state[n]);
 
         axios.post("/join", formData, {
             headers: {
