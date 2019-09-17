@@ -138,7 +138,7 @@ class Signup extends Component {
                                             {/* <Form.Label>Upload Image</Form.Label> */}
 
 
-                                            <Uploader handleFileChange = {this.handleFileChange} />
+                                        <Uploader handleFileChange = {this.handleFileChange} />
 
 
                                         </Form.Group>

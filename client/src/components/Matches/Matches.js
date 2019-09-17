@@ -1,9 +1,15 @@
 import React , {Component} from 'react';
+//<<<<<<< HEAD
 import './assets/style/styleMatches.css';
+//=======
+import '../../style/style.css';
+//>>>>>>> origin/d
 import { Button, Container, Row, Col, Image, DropdownButton, Dropdown} from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";
+import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
+
 
 
 class Matches extends Component {
@@ -15,8 +21,8 @@ class Matches extends Component {
     render(){
         return(
             <div>
+                <br/>
                 <Container>
-                    <br/>
                     <Row>
                         <Col xs={12} md={12} lg={12}>
                         Matches
@@ -27,13 +33,42 @@ class Matches extends Component {
                             <Dropdown.Item href="#/action-3">Both</Dropdown.Item>
                         </DropdownButton>
                     </Row>
-                    <br/>
-                    <Row>
+                </Container>
+                <br/>
+                    
+{/* <div>
+     {(() => {
+       switch(state.choice) {
+         case 'male':
+           matchesList.map(m => {
+        if(m.gender == "male") {
+        return (
+        <div>m.name</div>
+        )
+        }
+    }
+         case 'female':
+           matchesList.map(m => {
+        if(m.gender == "female") {
+        return (
+        <div>m.name</div>
+        )
+        }
+    }
+         default:
+           matchesList.map(m => {
+        return (
+        <div>m.name</div>
+        )
+        }
+       }
+     })()}
+</div> */}
+                <Container>
                         <Col xs={12} md={12} lg={12}>
-                            <div className="cardWrapper">
-                              
+                            <Wrapper>
                                     {this.state.matches.map(match => (
-                                            <Link to='/id'><UserCard
+                                            <Link to='matches/:id'><UserCard
                                             id={match.id}
                                             name={match.name}
                                             gender={match.gender}
@@ -44,10 +79,8 @@ class Matches extends Component {
                                             /></Link>
                                         ))
                                     }
-                                
-                            </div>
+                           </Wrapper>
                         </Col>
-                    </Row>
                 </Container>
             </div>
         )
