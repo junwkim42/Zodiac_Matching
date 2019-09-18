@@ -55,7 +55,9 @@ class Login extends Component {
 
 
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                alert("Wrong user credentials. Please check your information again");
+                console.log(err);});
         }
       };
 
