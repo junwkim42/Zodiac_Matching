@@ -43,74 +43,81 @@ class Profile extends Component {
 
                     <div id='spacer'></div>
 
-                <Container>
-                    <Row className='picCont'>
-                        <Col xs={9} md={5} lg={3}>
-                                <Image id='profPic' className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
-                                <img className='imgUnderlay' alt="image underlay" src={Underlay}/>
-                        </Col>
-                    </Row>
-                </Container>
-                <Container>
-                    <Row className='label'>
-                        <Col xs={8} md={4} lg={3}>
-                        Username, Age
-                        </Col>
-                    </Row>
-                </Container>
-                    
-                <Container>
-                    <Row className='picCont'>
-                        <Col xs={8} md={4} lg={3}>
-                                <Image className='imgLogo mx-auto d-block' alt="zodiac picture" src='import from database' roundedCircle fluid/>
-                        </Col>
-                    </Row>
-                </Container>
-                <Container>
-                    <Row className='label'>
-                        <Col xs={8} md={4} lg={3}>
-                       Horoscope
-                        </Col>
-                    </Row>
-                </Container>
-                <br/>
-                <Container>
-                    <Row className='horoscope'>
-                        <Col xs={10} md={10} lg={12}>
-                        "This is your daily Horoscope. Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-                        </Col>
-                    </Row>
-                </Container>
-                <br/>
-                <br/>
-                <Container>
-                    <Col xs={12} md={12} lg={12}>
-                            <Wrapper>
-                                    {this.state.matches.map(match => (
-                                            <UserCard
-                                            removeMatch={this.removeMatch}
-                                            id={match.id}
-                                            name={match.name}
-                                            gender={match.gender}
-                                            age={match.age}
-                                            birthdate={match.birthdate}
-                                            profilePic={match.profilePic}
-                                            zodiacPic={match.zodiacPic}
-                                            zodiacSign={match.zodiacSign}
-                                            />
-                                        ))
-                                    }
-                            </Wrapper>
+                <Row className='pageBodyContainer'>
+
+                    <Col xs={12} md={2} lg={3}>
+                        <div className='floatLeft'>
+                
+                            <Row className='picCont'>
+                                <Col xs={8} md={12} lg={9}>
+                                        <Image id='profPic' className='imgLogo mx-auto d-block' alt="profile picture" src='https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg' roundedCircle fluid/>
+                                        <img className='imgUnderlay' alt="image underlay" src={Underlay}/>
+                                </Col>
+                            </Row>
+                
+                            <Row className='label'>
+                                <Col xs={10} md={12} lg={12}>
+                                Username, Age
+                                </Col>
+                            </Row>
+               
+                            {/* <Row className='picCont'>
+                                <Col xs={8} md={12} lg={9}>
+                                        <Image className='imgLogo mx-auto d-block' alt="zodiac picture" src='import from database' roundedCircle fluid/>
+                                </Col>
+                            </Row>
+                
+                            <Row className='label'>
+                                <Col xs={10} md={12} lg={12}>
+                            Horoscope
+                                </Col>
+                            </Row> */}
+                
+                        <br/>
+                            <Container>
+                                <Row className='horoscope'>
+                                    <Col xs={10} md={12} lg={12}>
+                                    "You will find your perfect match soon, through this app!"
+                                    </Col>
+                                </Row>
+                            </Container>
+                        <br/>
+                        <br/>
+                        </div>
                     </Col>
-                </Container>
-                {/* <Container className='D'>
-                    <Row className='d'>
-                        <Col xs={12} md={4} lg={2}>
-                                <Link to='/matches'><Button size='lg' className='genericBtn'>Find Matches</Button></Link>
-                        </Col>
-                    </Row>
-                </Container> */}
-            <br/>
+
+
+                    <Col xs={12} md={6} lg={8}>
+                        <Container className='floatRight'>
+                            <Col xs={12} md={12} lg={11}>
+                                <Wrapper>
+                                        {this.state.matches.map(match => (
+                                                <UserCard
+                                                removeMatch={this.removeMatch}
+                                                id={match.id}
+                                                name={match.name}
+                                                gender={match.gender}
+                                                age={match.age}
+                                                birthdate={match.birthdate}
+                                                profilePic={match.profilePic}
+                                                zodiacPic={match.zodiacPic}
+                                                zodiacSign={match.zodiacSign}
+                                                />
+                                            ))
+                                        }
+                                </Wrapper>
+                            </Col>
+                        </Container>
+                    </Col>
+                </Row>
+                        {/* <Container className='D'>
+                            <Row className='d'>
+                                <Col xs={12} md={4} lg={2}>
+                                        <Link to='/matches'><Button size='lg' className='genericBtn'>Find Matches</Button></Link>
+                                </Col>
+                            </Row>
+                        </Container> */}
+                <br/>
             </div>
         
         )

@@ -7,7 +7,8 @@ import Uploader from'./Uploader';
 import { Link } from 'react-router-dom';
 import { Redirect } from 'react-router'
 import axios from "axios";
-
+import Male from "../../images/male-2-xxl.png"
+import Female from "../../images/female-2-xxl.png"
 
 
 class Signup extends Component {
@@ -156,11 +157,11 @@ class Signup extends Component {
                                         <div className='radioLabel'>Select your gender: <br/></div>
                                         <div class="radio-group">
                                             <label>
-                                            <input type="radio" name="gender" value="male" checked={this.state.gender === 'male'} onChange={this.handleInputChange}/> Male
+                                            <input type="radio" name="gender" value="male" checked={this.state.gender === 'male'} onChange={this.handleInputChange}/> Male <img id='maleIcon' src={Male} />
                                             </label>
                                             <br/>
                                             <label>
-                                            <input type="radio" name="gender" value="female" checked={this.state.gender === 'female'} onChange={this.handleInputChange} /> Female
+                                            <input type="radio" name="gender" value="female" checked={this.state.gender === 'female'} onChange={this.handleInputChange} /> Female <img id='femaleIcon' src={Female} /> 
                                             </label>
                                         </div>
                                     </form>
