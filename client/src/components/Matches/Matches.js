@@ -59,9 +59,9 @@ class Matches extends Component {
                         Matches
                         </Col>
                         <DropdownButton id="dropdown-basic-button" title="Gender">
-                            <Dropdown.Item href="#/action-1">Male</Dropdown.Item>
-                            <Dropdown.Item href="#/action-2">Female</Dropdown.Item>
-                            <Dropdown.Item href="#/action-3">Both</Dropdown.Item>
+                            <Dropdown.Item >Male</Dropdown.Item>
+                            <Dropdown.Item >Female</Dropdown.Item>
+                            <Dropdown.Item >Both</Dropdown.Item>
                         </DropdownButton>
                     </Row>
                 </Container>
@@ -99,15 +99,17 @@ class Matches extends Component {
                         <Col xs={12} md={12} lg={12}>
                             <Wrapper>
                                     {this.state.matches.map(match => (
-                                            <Link to='matches/:id'><UserCard
+                                        <UserCard
+                                            removeMatch={this.removeMatch}
                                             id={match.id}
                                             name={match.name}
                                             gender={match.gender}
                                             age={match.age}
                                             birthdate={match.birthdate}
                                             profilePic={match.profilePic}
+                                            zodiacPic={match.zodiacPic}
                                             zodiacSign={match.zodiacSign}
-                                            /></Link>
+                                        />
                                         ))
                                     }
                            </Wrapper>
