@@ -120,6 +120,51 @@ body {
         inset 10px -11px 8px -10px rgba(0, 0, 0, 0.233); 
 }
 
+/* ======      profile page    ======= */
+
+.navbar {
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-brand {
+    flex-grow: 2;
+    color: white;
+    text-align: center;
+    font-family: 'Vollkorn SC', serif;
+    margin: 0px;
+}
+
+#updateProfileBtn {
+    max-height: 3.5vh;
+    opacity: 0.5;
+    transition: ease-in 0.2s;
+    flex-grow: 1;
+}
+
+#updateProfileBtn:hover {
+    max-height: 4vh;
+    opacity: 0.9;
+    transition: ease-out 0.15s;
+}
+
+#logoutBtn {
+    max-height: 3.5vh;
+    opacity: 0.5;
+    transition: ease-in 0.2s;
+    flex-grow: 1;
+}
+
+#logoutBtn:hover {
+    max-height: 4vh;
+    opacity: 0.9;
+    transition: ease-out 0.15s;
+}
+
+#spacer {
+    height: 7vh;
+}
+
 .label {
     justify-content: center;
     text-align: center;

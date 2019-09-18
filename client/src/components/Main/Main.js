@@ -16,19 +16,11 @@ class Main extends Component {
                         <Row className='a'>
                             <Col xs={8} md={4} lg={4}>
                                     <Image className='imgLogo mx-auto d-block' alt='aligment' src={Zodiac} roundedCircle fluid/>
-                                    {/* <div className='txtLogo'>Zodiac</div> */}
                             </Col>
                         </Row>
                     </Container>
-                    {/* <Container className='B'>
-                        <Row className='b'>
-                            <Col xs={6} md={8} lg={8}>
-                                Zodiac
-                            </Col>
-                        </Row>
-                    </Container> */}
-                    <br></br>
-                    <br></br>
+                    <br/>
+                    <br/>
                     <Container className='C'>
                         <Row className='c'>
                             <Col xs={9} md={5} lg={3}>

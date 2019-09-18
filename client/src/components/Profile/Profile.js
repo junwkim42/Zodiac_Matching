@@ -6,6 +6,8 @@ import UserCard from "../../components/UserCard/UserCard";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
 import Underlay from '../../images/trzcacak.rs-zodiac-wheel-png-1500895.png';
+import Logout from "../../images/logout-xxl.png"
+import Update from "../../images/user-4-xxl.png"
 
 class Profile extends Component {
     componentWillMount(){
@@ -31,6 +33,16 @@ class Profile extends Component {
     render () {
         return(
             <div className='profCont'>
+                <nav className="navbar navbar-expand-lg fixed-top">
+                    <Link to='/profile'><img id='updateProfileBtn' src={Update} /></Link>
+                    <div className="navbar-brand">
+                        Z O D I A C
+                    </div>
+                    <Link to='/'><img id='logoutBtn' src={Logout} /></Link>
+                </nav>
+
+                    <div id='spacer'></div>
+
                 <Container>
                     <Row className='picCont'>
                         <Col xs={9} md={5} lg={3}>
@@ -50,7 +62,7 @@ class Profile extends Component {
                 <Container>
                     <Row className='picCont'>
                         <Col xs={8} md={4} lg={3}>
-                                <Image className='imgLogo mx-auto d-block' alt="profile picture" src='import from database' roundedCircle fluid/>
+                                <Image className='imgLogo mx-auto d-block' alt="zodiac picture" src='import from database' roundedCircle fluid/>
                         </Col>
                     </Row>
                 </Container>
