@@ -1,4 +1,3 @@
-require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
 const mongoose = require("mongoose");
@@ -7,7 +6,8 @@ const path = require('path');
 const bodyParser = require('body-parser');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+var PORT = process.env.PORT || 3001;
+var MONGODB_URI = process.env.MONGODB_URI || "mongodb://user1:root1234@ds049854.mlab.com:49854/heroku_6hd4p8qj";
 
 require('./config/passport')(passport);
 
@@ -45,7 +45,7 @@ app.get("*", function(req, res){
 
 
 // Connect to the Mongo DB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/zodiac", { useNewUrlParser: true })
+mongoose.connect(MONGODB_URI, { useNewUrlParser: true })
     .then(()=>console.log("MongoDB connected"))
     .catch(err => console.log(err));
 
