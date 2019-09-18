@@ -73,7 +73,6 @@ class Signup extends Component {
         else {
                 alert("Please finish the form to continue.")
         }
-//---------------------------------
 
       };
 
