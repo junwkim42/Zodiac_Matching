@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import UserCard from "../../components/UserCard/UserCard";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
-
+import Logout from "../../images/logout-xxl.png"
+import Prof from "../../images/user-4-xxl.png"
+import axios from "axios";
 
 
 class Matches extends Component {
@@ -15,16 +17,41 @@ class Matches extends Component {
     componentDidMount(){
         //check localStorage if there is a username
         //if not this.props.hitory("/login")
-        if (!localStorage.getItem('username')){
+        if (!localStorage.getItem('username') || !this.props.location.state){
             this.props.history.push('/login');
         }
         else{
             console.log(this.props.location.state);
         }
     }
+    handleLogout = () => {
+        localStorage.setItem('username', "");
+        this.props.history.push('/login');
+    }
+
+    handleProfile = () => {
+        console.log(this.props.location.state);
+        axios.get("/users/" + this.props.location.state.user.username).then(res => {
+            console.log(res.data);
+           this.props.history.push({
+            pathname: '/profile',
+            state: {
+                user: res.data
+            }});
+        })
+        .catch(err => console.log(err));
+    }
     render(){
         return(
             <div>
+                <nav className="navbar navbar-expand-lg fixed-top">
+                    <Link onClick={this.handleProfile}><img id='updateProfileBtn' src={Prof} alt="profile" /></Link>
+                    <div className="navbar-brand">
+                        Z O D I A C
+                    </div>
+                    <Link onClick={this.handleLogout}><img id='logoutBtn' src={Logout} alt="logout"/></Link>
+                </nav>
+                <div id='spacer'></div>
                 <br/>
                 <Container>
                     <Row>

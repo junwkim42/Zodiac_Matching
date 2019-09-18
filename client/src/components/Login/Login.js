@@ -11,7 +11,20 @@ class Login extends Component {
         username: "",
         password: ""
     };
-
+    componentWillMount(){
+        if (localStorage.getItem('username')){
+            var uName = localStorage.getItem('username');
+            axios.get("/users/" + uName).then(res => {
+                console.log(res.data);
+               this.props.history.push({
+                pathname: '/profile',
+                state: {
+                    user: res.data
+                }});
+            })
+            .catch(err => console.log(err));
+        }
+    }
     handleInputChange = event => {
         const { name, value } = event.target;
         this.setState({

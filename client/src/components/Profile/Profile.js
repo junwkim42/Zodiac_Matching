@@ -6,6 +6,8 @@ import UserCard from "../../components/UserCard/UserCard";
 import Wrapper from "../../components/Wrapper/Wrapper";
 import matches from "../../matches.json";
 import Underlay from '../../images/trzcacak.rs-zodiac-wheel-png-1500895.png';
+import Logout from "../../images/logout-xxl.png"
+import Heart from "../../images/heart.png"
 import axios from "axios";
 
 
@@ -15,10 +17,10 @@ class Profile extends Component {
         matches,
         horo:""
       };
-    componentDidMount(){
+    componentWillMount(){
         //check localStorage if there is a username
         //if not this.props.hitory("/login")
-        if (!localStorage.getItem('username')){
+        if (!localStorage.getItem('username') || !this.props.location.state){
             this.props.history.push('/login');
         }
         else{
@@ -26,6 +28,23 @@ class Profile extends Component {
         }
     }
 
+    handleLogout = () => {
+        localStorage.setItem('username', "");
+        this.props.history.push('/login');
+    }
+
+    handleMatch = () => {
+        console.log(this.props.location.state);
+        axios.get("/users/" + this.props.location.state.user.username).then(res => {
+            console.log(res.data);
+           this.props.history.push({
+            pathname: '/matches',
+            state: {
+                user: res.data
+            }});
+        })
+        .catch(err => console.log(err));
+    }
     getHoroscope = () => {
         axios.get("http://sandipbgt.com/theastrologer/api/horoscope/" + this.props.location.state.user.zodiac.toLowerCase() + "/today/")
         .then(res => {
@@ -46,16 +65,33 @@ class Profile extends Component {
     // Set this.state.matches equal to the new matches array
     this.setState({ matches });
     };
-    
+
     render () {
-        console.log(this.props.location.state);
         let usrimg = 'https://static.zerochan.net/Maxine.Caulfield.full.2237212.jpg';
-        if (this.props.location.state.user.gender === "male"){
-            usrimg = 'https://vignette.wikia.nocookie.net/rememberme/images/a/a3/Mark_jefferson.png/revision/latest?cb=20150301180024';
+        let uName = "Unavailable";
+        let uDate = "Unavailable";
+        let zPic = "Unavailable";
+        let uZodiac = "Unavailable";
+        if (this.props.location.state){
+            if (this.props.location.state.user.gender === "male"){
+                usrimg = 'https://vignette.wikia.nocookie.net/rememberme/images/a/a3/Mark_jefferson.png/revision/latest?cb=20150301180024';
+            }
+            uName = this.props.location.state.user.name;
+            uDate = this.props.location.state.user.birthDate;
+            zPic = this.props.location.state.user.zodiacPic;
+            uZodiac = this.props.location.state.user.zodiac;
         }
 
         return(
             <div className='profCont'>
+                <nav className="navbar navbar-expand-lg fixed-top">
+                    <Link onClick={this.handleMatch}><img id='updateProfileBtn' src={Heart} alt="match" /></Link>
+                    <div className="navbar-brand">
+                        Z O D I A C
+                    </div>
+                    <Link onClick={this.handleLogout}><img id='logoutBtn' src={Logout} alt="logout"/></Link>
+                </nav>
+                <div id='spacer'></div>
                 <Container>
                     <Row className='picCont'>
                         <Col xs={9} md={5} lg={3}>
@@ -67,7 +103,7 @@ class Profile extends Component {
                 <Container>
                     <Row className='label'>
                         <Col xs={8} md={4} lg={3}>
-                        {this.props.location.state.user.name}, {this.props.location.state.user.birthDate}
+                        {uName}, {uDate}
                         </Col>
                     </Row>
                 </Container>
@@ -75,7 +111,7 @@ class Profile extends Component {
                 <Container>
                     <Row className='picCont'>
                         <Col xs={8} md={4} lg={3}>
-                                <Image className='imgLogo mx-auto d-block' alt="zodiac picture" src={this.props.location.state.user.zodiacPic} roundedCircle fluid/>
+                                <Image className='imgLogo mx-auto d-block' alt="zodiac picture" src={zPic} roundedCircle fluid/>
                         </Col>
                     </Row>
                 </Container>
@@ -94,7 +130,7 @@ class Profile extends Component {
                             variant="info" 
                             className='genericBtn'
                             onClick={this.getHoroscope}>
-                                Today's Horoscope for {this.props.location.state.user.zodiac}
+                                Today's Horoscope for {uZodiac}
                             </Button>
                         </Col>
                     </Row>
@@ -121,13 +157,6 @@ class Profile extends Component {
                             </Wrapper>
                     </Col>
                 </Container>
-                {/* <Container className='D'>
-                    <Row className='d'>
-                        <Col xs={12} md={4} lg={2}>
-                                <Link to='/matches'><Button size='lg' className='genericBtn'>Find Matches</Button></Link>
-                        </Col>
-                    </Row>
-                </Container> */}
             <br/>
             </div>
         
