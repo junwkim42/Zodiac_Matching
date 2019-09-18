@@ -9,11 +9,19 @@ import matches from "../../matches.json";
 
 
 class Matches extends Component {
-
     state = {
         matches
       };
-
+    componentDidMount(){
+        //check localStorage if there is a username
+        //if not this.props.hitory("/login")
+        if (!localStorage.getItem('username')){
+            this.props.history.push('/login');
+        }
+        else{
+            console.log(this.props.location.state);
+        }
+    }
     render(){
         return(
             <div>

@@ -38,6 +38,7 @@ app.use(passport.session());
 //app.use(routes);
 
 require("./routes/auth")(app);
+require("./routes/userinfo")(app);
 app.get("*", function(req, res){
   res.sendFile(path.join(__dirname + "/client/build/index.html"));
 });

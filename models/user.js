@@ -6,6 +6,7 @@ const userSchema = new Schema({
   password: { type: String, required: true },
   birthDate: { type: String, required: true },
   zodiac: {type: String},
+  zodiacPic: {type: String},
   name: { type: String },
   interest: { type: String},
   location: {type: String},

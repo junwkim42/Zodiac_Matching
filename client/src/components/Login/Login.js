@@ -28,15 +28,19 @@ class Login extends Component {
           })
             .then(res => {
                 var json = JSON.parse(res.config.data);
-                console.log(res);
-                console.log("=================================");
-                console.log(res.config.data);
-                console.log("=================================");
-                console.log(json.username);
-                localStorage.setItem("username", json.username);
-                this.props.history.push({
+                axios.get("/users/" + json.username).then(res => {
+                    console.log(res.data);
+                   localStorage.setItem("username", json.username);
+                   this.props.history.push({
                     pathname: '/profile',
-                    state: {username: json.username}});
+                    state: {
+                        user: res.data
+                    }});
+                })
+                .catch(err => console.log(err));
+
+
+
             })
             .catch(err => console.log(err));
         }
