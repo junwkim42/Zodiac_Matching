@@ -45,7 +45,7 @@ class Profile extends Component {
         .catch(err => console.log(err));
     }
     getHoroscope = () => {
-        axios.get("https://sandipbgt.com/theastrologer/api/horoscope/" + this.props.location.state.user.zodiac.toLowerCase() + "/today/")
+        axios.get("http://sandipbgt.com/theastrologer/api/horoscope/" + this.props.location.state.user.zodiac.toLowerCase() + "/today/")
         .then(res => {
             console.log(res);
             let i = res.data.horoscope.search("\\(c\\)");
