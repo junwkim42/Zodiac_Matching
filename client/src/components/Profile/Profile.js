@@ -2,8 +2,7 @@ import React , {Component} from 'react';
 import '../../style/style.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import UserCard from "../../components/UserCard/UserCard";
-import Wrapper from "../../components/Wrapper/Wrapper";
+
 import matches from "../../matches.json";
 import Underlay from '../../images/trzcacak.rs-zodiac-wheel-png-1500895.png';
 import Logout from "../../images/logout-xxl.png"
@@ -137,26 +136,6 @@ class Profile extends Component {
                 </Container>
                 <br/>
                 <br/>
-                <Container>
-                    <Col xs={12} md={12} lg={12}>
-                            <Wrapper>
-                                    {this.state.matches.map(match => (
-                                            <UserCard
-                                            removeMatch={this.removeMatch}
-                                            id={match.id}
-                                            name={match.name}
-                                            gender={match.gender}
-                                            age={match.age}
-                                            birthdate={match.birthdate}
-                                            profilePic={match.profilePic}
-                                            zodiacPic={match.zodiacPic}
-                                            zodiacSign={match.zodiacSign}
-                                            />
-                                        ))
-                                    }
-                            </Wrapper>
-                    </Col>
-                </Container>
             <br/>
             </div>
         

@@ -9,8 +9,9 @@ mongoose.connect(
 
 const matchesSeed = [
   {
-    id: 1,
     name: "Chloie",
+    username: "1@1.com",
+    password: "123123",
     gender: "Female",
     birthdate: "21-Mar-1997",
     age: 22,
@@ -19,8 +20,9 @@ const matchesSeed = [
     zodiacSign: "Aries"
   },
   {
-    id: 2,
     name: "Hally",
+    username: "2@2.com",
+    password: "123123",
     gender: "Female",
     birthdate: "20-Apr-1996",
     age: 23,
@@ -29,8 +31,9 @@ const matchesSeed = [
     zodiacSign: "Taurus"
 },
 {
-    id: 3,
     name: "Panda",
+    username: "3@3.com",
+    password: "123123",
     gender: "Female",
     birthdate: "21-May-1998",
     age: 21,
@@ -39,8 +42,9 @@ const matchesSeed = [
     zodiacSign: "Gemini"
 },
 {
-    id: 4,
     name: "Mike",
+    username: "4@4.com",
+    password: "123123",
     gender: "Male",
     birthdate: "21-Jun-1990",
     age: 29,
@@ -49,8 +53,9 @@ const matchesSeed = [
     zodiacSign: "Cancer"
 },
 {
-    id: 5,
     name: "Facebook Man",
+    username: "5@5.com",
+    password: "123123",
     gender: "Male",
     birthdate: "23-Jul-1980",
     age: 39,
@@ -59,8 +64,10 @@ const matchesSeed = [
     zodiacSign: "Leo"
 },
 {
-    id: 6,
+
     name: "Warren",
+    username: "6@6.com",
+    password: "123123",
     gender: "Male",
     birthdate: "23-Aug-2000",
     age: 19,
@@ -69,8 +76,10 @@ const matchesSeed = [
     zodiacSign: "Virgo"
 },
 {
-    id: 7,
+
     name: "Angelina",
+    username: "7@7.com",
+    password: "123123",
     gender: "Female",
     birthdate: "23-Sep-1995",
     age: 24,
@@ -79,8 +88,10 @@ const matchesSeed = [
     zodiacSign: "Libra"
   },
   {
-    id: 8,
+
     name: "Art",
+    username: "8@8.com",
+    password: "123123",
     gender: "Male",
     birthdate: "26-Oct-1986",
     age: 33,
@@ -89,8 +100,10 @@ const matchesSeed = [
     zodiacSign: "Scorpio"
 },
 {
-    id: 9,
+
     name: "Kate",
+    username: "9@9.com",
+    password: "123123",
     gender: "Female",
     birthdate: "22-Nov-2001",
     age: 17,
@@ -99,8 +112,10 @@ const matchesSeed = [
     zodiacSign: "Sagittarius"
 },
 {
-    id: 10,
+
     name: "Maxine",
+    username: "10@10.com",
+    password: "123123",
     gender: "Female",
     birthdate: "21-Sep-1995",
     age: 24,
@@ -109,8 +124,10 @@ const matchesSeed = [
     zodiacSign: "Virgo"
 },
 {
-    id: 11,
+
     name: "Jefferson",
+    username: "11@11.com",
+    password: "123123",
     gender: "Male",
     birthdate: "20-Jan-1982",
     age: 37,
@@ -119,8 +136,10 @@ const matchesSeed = [
     zodiacSign: "Aquarius"
 },
 {
-    id: 12,
+
     name: "Nathan",
+    username: "12@12.com",
+    password: "123123",
     gender: "Male",
     birthdate: "19-Feb-1999",
     age: 20,
@@ -129,8 +148,10 @@ const matchesSeed = [
     zodiacSign: "Pisces"
 },
 {
-    id: 13,
+
     name: "Dana",
+    username: "13@13.com",
+    password: "123123",
     gender: "Female",
     birthdate: "11-Jul-1995",
     age: 24,
@@ -139,8 +160,10 @@ const matchesSeed = [
     zodiacSign: "Cancer"
 },
 {
-    id: 14,
+
     name: "Victoria",
+    username: "14@14.com",
+    password: "123123",
     gender: "Female",
     birthdate: "14-Aug-1995",
     age: 24,
@@ -149,8 +172,10 @@ const matchesSeed = [
     zodiacSign: "Leo"
 },
 {
-    id: 15,
+
     name: "Taylor",
+    username: "15@15.com",
+    password: "123123",
     gender: "Female",
     birthdate: "22-Dec-1993",
     age: 26,
@@ -159,8 +184,10 @@ const matchesSeed = [
     zodiacSign: "Capricorn"
   },
   {
-    id: 16,
+
     name: "Rachel",
+    username: "16@16.com",
+    password: "123123",
     gender: "Female",
     birthdate: "22-May-1994",
     age: 25,
@@ -169,8 +196,10 @@ const matchesSeed = [
     zodiacSign: "Gemini"
 },
 {
-    id: 17,
+
     name: "Frank",
+    username: "17@17.com",
+    password: "123123",
     gender: "Male",
     birthdate: "31-Aug-1981",
     age: 38,
@@ -179,8 +208,10 @@ const matchesSeed = [
     zodiacSign: "Virgo"
 },
 {
-    id: 18,
+
     name: "Ethan",
+    username: "18@18.com",
+    password: "123123",
     gender: "Male",
     birthdate: "05-Oct-1973",
     age: 46,
@@ -189,8 +220,10 @@ const matchesSeed = [
     zodiacSign: "Libra"
 },
 {
-    id: 19,
+
     name: "Jayden",
+    username: "19@19.com",
+    password: "123123",
     gender: "Male",
     birthdate: "14-Nov-1978",
     age: 41,
@@ -199,8 +232,10 @@ const matchesSeed = [
     zodiacSign: "Scorpio"
 },
 {
-    id: 20,
+
     name: "Sean",
+    username: "20@20.com",
+    password: "123123",
     gender: "Male",
     birthdate: "15-Mar-2000",
     age: 19,
