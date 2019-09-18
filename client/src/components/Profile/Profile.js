@@ -8,6 +8,8 @@ import matches from "../../matches.json";
 import Underlay from '../../images/trzcacak.rs-zodiac-wheel-png-1500895.png';
 import axios from "axios";
 
+import Logout from "../../images/logout-xxl.png"
+import Update from "../../images/user-4-xxl.png"
 
 class Profile extends Component {
 
@@ -120,15 +122,38 @@ class Profile extends Component {
                                     }
                             </Wrapper>
                     </Col>
-                </Container>
-                {/* <Container className='D'>
-                    <Row className='d'>
-                        <Col xs={12} md={4} lg={2}>
-                                <Link to='/matches'><Button size='lg' className='genericBtn'>Find Matches</Button></Link>
-                        </Col>
-                    </Row>
-                </Container> */}
-            <br/>
+                    </Container>               
+
+                    <Col xs={12} md={6} lg={8}>
+                        <Container className='floatRight'>
+                            <Col xs={12} md={12} lg={11}>
+                                <Wrapper>
+                                        {this.state.matches.map(match => (
+                                                <UserCard
+                                                removeMatch={this.removeMatch}
+                                                id={match.id}
+                                                name={match.name}
+                                                gender={match.gender}
+                                                age={match.age}
+                                                birthdate={match.birthdate}
+                                                profilePic={match.profilePic}
+                                                zodiacPic={match.zodiacPic}
+                                                zodiacSign={match.zodiacSign}
+                                                />
+                                            ))
+                                        }
+                                </Wrapper>
+                            </Col>
+                        </Container>
+                    </Col>
+                        {/* <Container className='D'>
+                            <Row className='d'>
+                                <Col xs={12} md={4} lg={2}>
+                                        <Link to='/matches'><Button size='lg' className='genericBtn'>Find Matches</Button></Link>
+                                </Col>
+                            </Row>
+                        </Container> */}
+                <br/>
             </div>
         
         )
